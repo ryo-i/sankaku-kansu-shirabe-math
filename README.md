@@ -8,8 +8,9 @@
 
 ## 進捗（コミット）
 
+- 参考資料を追記中 [#1](https://github.com/ryo-i/trigonometric-function-generator/issues/1)
 - ファイル一式をコミット [#2](https://github.com/ryo-i/trigonometric-function-generator/issues/2)
-- 三角関数について調べたことを書いていく [#1](https://github.com/ryo-i/trigonometric-function-generator/issues/1)
+
 
 ## 詳細（ブログ）
 
