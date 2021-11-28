@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/p5": "^1.3.1",
     "next": "11.1.2",
     "p5": "^1.4.0",
     "react": "17.0.2",
