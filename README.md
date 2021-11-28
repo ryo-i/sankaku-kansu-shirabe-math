@@ -8,7 +8,8 @@
 
 ## 進捗（コミット）
 
-- アプリ名、リポジトリ名を「三角関数しらべMath」に変更 [#2](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/2)
+- p5.jsをインストール [#3](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/3)
+- やりたいことをイシューに記入 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 
