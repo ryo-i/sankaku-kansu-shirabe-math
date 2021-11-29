@@ -1,8 +1,14 @@
 import React, { useState, useEffect }  from 'react';
 import styled from 'styled-components';
-import { hello } from '../modules/hello/hello';
+import sketch from '../modules/sketch/getStarted'
+// import Canvas from './Canvas'
+import dynamic from "next/dynamic";
 import { inner } from '../data/data.json';
 
+const Canvas = dynamic(() => import('./Canvas'), {
+  loading: () => <></>,
+  ssr: false
+});
 
 // CSS in JS
 const H2 = styled.h2`
@@ -17,28 +23,22 @@ function Inner() {
   const [text, setText] = useState('へんじがない、ただのしかばねのようだ。');
 
   useEffect(() => {
-    hello();
+    // hello();
   });
 
   // JSX
   return (
     <>
       {
-        // inner.length >= 5 // test
-        inner.length >= 1
-          ? inner.map((inner, index) =>
-            <section key={ index }>
-              <H2>{ inner.title }</H2>
-              <p dangerouslySetInnerHTML={{ __html: inner.text }}></p>
-            </section>
-          )
-          : <section>
-              <h2>{ title }</h2>
-              <p>{ text }</p>
-          </section>
+        <section>
+          <h2>{ title }</h2>
+          <p>{ text }</p>
+          <Canvas sketch={sketch} />
+        </section>
       }
     </>
   );
 }
+
 
 export default Inner;
