@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 単位円用のモジュールunitCircleに差し替え [#3](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/3)
+- parent()で任意のタグにcanvasを配置 [#3](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/3)
 - やりたいことをイシューに記入 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 

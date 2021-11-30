@@ -2,7 +2,7 @@ import p5 from 'p5';
 
 const unitCircle = (p: p5) => {
     p.setup = () => {
-        p.createCanvas(400, 400);
+        p.createCanvas(400, 400).parent('unitCircle');
     }
 
     p.draw = () => {

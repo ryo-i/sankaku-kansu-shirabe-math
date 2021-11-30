@@ -29,9 +29,11 @@ function Inner() {
   return (
     <>
       <section>
+        <figure id="unitCircle">
+          <Canvas sketch={sketch} />
+        </figure>
         <h2>{ title }</h2>
         <p>{ text }</p>
-        <Canvas sketch={sketch} />
       </section>
     </>
   );
