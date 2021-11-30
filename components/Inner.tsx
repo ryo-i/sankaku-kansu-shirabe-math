@@ -1,7 +1,6 @@
 import React, { useState, useEffect }  from 'react';
 import styled from 'styled-components';
-import sketch from '../modules/sketch/getStarted'
-// import Canvas from './Canvas'
+import sketch from '../modules/sketch/unitCircle'
 import dynamic from "next/dynamic";
 import { inner } from '../data/data.json';
 
@@ -29,13 +28,11 @@ function Inner() {
   // JSX
   return (
     <>
-      {
-        <section>
-          <h2>{ title }</h2>
-          <p>{ text }</p>
-          <Canvas sketch={sketch} />
-        </section>
-      }
+      <section>
+        <h2>{ title }</h2>
+        <p>{ text }</p>
+        <Canvas sketch={sketch} />
+      </section>
     </>
   );
 }
