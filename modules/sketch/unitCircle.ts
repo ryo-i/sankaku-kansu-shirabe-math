@@ -1,6 +1,13 @@
+import React, { useContext, useState } from 'react';
 import p5 from 'p5';
+// import { Context } from '../../components/Inner';
+
 
 const unitCircle = (p: p5) => {
+    // let context = useContext(Context);
+    const context = 'test';
+    // console.log('context', context);
+
     p.setup = () => {
         const windowWidth = p.windowWidth;
         // console.log('windowWidth', windowWidth);
@@ -15,6 +22,8 @@ const unitCircle = (p: p5) => {
     p.draw = () => {
         p.background(220);
         p.ellipse(50, 50, 80, 80);
+        p.textSize(32);
+        p.text(context, 10, 30);
     };
 
     p.windowResized = () => {

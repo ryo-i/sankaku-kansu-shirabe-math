@@ -9,6 +9,11 @@ const Canvas = dynamic(() => import('./Canvas'), {
   ssr: false
 });
 
+export const Context: React.Context<string> = React.createContext('');
+const data = {
+  text: 'reactからp5へ'
+};
+
 // CSS in JS
 const H2 = styled.h2`
   color: red;
@@ -30,7 +35,9 @@ function Inner() {
     <>
       <section>
         <figure id="unitCircle">
-          <Canvas sketch={sketch} />
+          <Context.Provider value={data.text} >
+            <Canvas sketch={sketch} />
+          </Context.Provider>
         </figure>
         <h2>{ title }</h2>
         <p>{ text }</p>
