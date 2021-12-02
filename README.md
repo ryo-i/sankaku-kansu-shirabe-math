@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- p5.js上にテキストを表示（useContextはエラー、、） [#3](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/3)
+- CanvasコンポーネントにuseContextで値を受け渡し [#3](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/3)
 - やりたいことをイシューに記入 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
