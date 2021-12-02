@@ -1,16 +1,25 @@
-import p5 from 'p5';
+import { P5Instance } from 'react-p5-wrapper'
 
-const sketch = (s: p5) => {
-    s.setup = () => {
-        s.createCanvas(10, 10);
-    }
+const sketch = (p5: P5Instance) => {
+    let rotation = 0;
 
-    s.draw = () => {
-        s.background(0);
-        s.circle(10, 10, 10);
-    }
-}
+    p5.setup = () => p5.createCanvas(600, 400, p5.WEBGL);
 
-// const sketchInstance = new p5(sketch);
+    p5.updateWithProps = props => {
+        if (props.rotation) {
+        rotation = (props.rotation * Math.PI) / 180;
+        }
+    };
+
+    p5.draw = () => {
+        p5.background(100);
+        p5.normalMaterial();
+        p5.noStroke();
+        p5.push();
+        p5.rotateY(rotation);
+        p5.box(100);
+        p5.pop();
+    };
+};
 
 export default sketch;

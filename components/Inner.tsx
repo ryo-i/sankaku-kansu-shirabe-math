@@ -1,15 +1,19 @@
 import React, { useState, useEffect }  from 'react';
 import styled from 'styled-components';
-import sketch from '../modules/sketch/unitCircle'
+import { P5WrapperProps } from 'react-p5-wrapper'
+import sketch from '../modules/sketch/sketch'
 import dynamic from "next/dynamic";
 import { inner } from '../data/data.json';
 
-const Canvas = dynamic(() => import('./Canvas'), {
-  loading: () => <></>,
-  ssr: false
-});
 
-export const Context: React.Context<string> = React.createContext('');
+const ReactP5Wrapper = dynamic(() => import('react-p5-wrapper')
+    .then(mod => mod.ReactP5Wrapper as any), {
+    ssr: false
+}) as unknown as React.NamedExoticComponent<P5WrapperProps>
+
+
+/* export const Context: React.Context<string> = React.createContext('');
+
 const data = {
   text: 'reactからp5へ'
 };
@@ -35,15 +39,31 @@ function Inner() {
     <>
       <section>
         <figure id="unitCircle">
-          <Context.Provider value={data.text} >
-            <Canvas sketch={sketch} />
-          </Context.Provider>
+          <ReactP5Wrapper sketch={sketch} text={title} />
         </figure>
         <h2>{ title }</h2>
         <p>{ text }</p>
       </section>
     </>
   );
+} */
+
+
+function Inner() {
+  const [rotation, setRotation] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(
+      () => setRotation(rotation => rotation + 100),
+      100
+    );
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  return <ReactP5Wrapper sketch={sketch} rotation={rotation} />;
 }
 
 

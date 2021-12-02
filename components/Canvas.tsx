@@ -9,7 +9,7 @@ const Canvas = (props: any) => {
 
     useEffect(() => {
         new p5(props.sketch)
-    }, [props.sketch])
-    return (<></>)
+    }, [props.sketch]);
+    return (<></>);
 }
 export default Canvas
