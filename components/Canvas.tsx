@@ -1,11 +1,11 @@
 import React, { useEffect, useContext } from "react";
 import p5 from 'p5';
-import { Context } from './Inner';
+// import { Context } from './Inner';
 
 
 const Canvas = (props: any) => {
-    let context = useContext(Context);
-    console.log('context', context);
+    // let context = useContext(Context);
+    // console.log('context', context);
 
     useEffect(() => {
         new p5(props.sketch)

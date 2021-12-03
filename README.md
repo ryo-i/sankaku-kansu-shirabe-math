@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- react-p5-wrapperでcanvasに値を渡す（dynamicも必要） [#3](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/3)
+- Canvasコンポーネントのデプロイエラー修正 [#3](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/3)
 - やりたいことをイシューに記入 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
