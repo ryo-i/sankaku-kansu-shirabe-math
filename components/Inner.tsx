@@ -1,7 +1,7 @@
 import React, { useState, useEffect }  from 'react';
 import styled from 'styled-components';
 import { P5WrapperProps } from 'react-p5-wrapper'
-import sketch from '../modules/sketch/sketch'
+import sketch from '../modules/sketch/unitCircle'
 import dynamic from "next/dynamic";
 import { inner } from '../data/data.json';
 
@@ -12,11 +12,10 @@ const ReactP5Wrapper = dynamic(() => import('react-p5-wrapper')
 }) as unknown as React.NamedExoticComponent<P5WrapperProps>
 
 
-/* export const Context: React.Context<string> = React.createContext('');
-
 const data = {
   text: 'reactからp5へ'
 };
+
 
 // CSS in JS
 const H2 = styled.h2`
@@ -29,27 +28,6 @@ function Inner() {
   // Hooks
   const [title, setTitle] = useState('内容が無いよう');
   const [text, setText] = useState('へんじがない、ただのしかばねのようだ。');
-
-  useEffect(() => {
-    // hello();
-  });
-
-  // JSX
-  return (
-    <>
-      <section>
-        <figure id="unitCircle">
-          <ReactP5Wrapper sketch={sketch} text={title} />
-        </figure>
-        <h2>{ title }</h2>
-        <p>{ text }</p>
-      </section>
-    </>
-  );
-} */
-
-
-function Inner() {
   const [rotation, setRotation] = useState(0);
 
   useEffect(() => {
@@ -63,7 +41,18 @@ function Inner() {
     };
   }, []);
 
-  return <ReactP5Wrapper sketch={sketch} rotation={rotation} />;
+  // JSX
+  return (
+    <>
+      <section>
+        <figure id="unitCircle">
+          <ReactP5Wrapper sketch={sketch} rotation={rotation} />
+        </figure>
+        <h2>{ title }</h2>
+        <p>{ text }</p>
+      </section>
+    </>
+  );
 }
 
 

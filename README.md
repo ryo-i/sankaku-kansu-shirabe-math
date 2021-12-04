@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- Canvasコンポーネントのデプロイエラー修正 [#3](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/3)
+- Canvas要素の内容をunitCircleモジュールに変更 [#3](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/3)
 - やりたいことをイシューに記入 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 

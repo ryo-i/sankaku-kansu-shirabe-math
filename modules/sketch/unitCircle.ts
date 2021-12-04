@@ -1,35 +1,41 @@
-import React, { useContext, useState } from 'react';
-import p5 from 'p5';
+import { P5Instance } from 'react-p5-wrapper'
 
 
 
-const unitCircle = (p: p5) => {
+const unitCircle = (p5: P5Instance) => {
     const context = 'test';
+    let rotation = 0;
 
-    p.setup = () => {
-        const windowWidth = p.windowWidth;
+    p5.setup = () => {
+        const windowWidth = p5.windowWidth;
         // console.log('windowWidth', windowWidth);
 
         if (windowWidth < 600) {
-            p.createCanvas(windowWidth -60, windowWidth -60).parent('unitCircle');
+            p5.createCanvas(windowWidth -60, windowWidth -60);
         } else {
-            p.createCanvas(600, 600).parent('unitCircle');
+            p5.createCanvas(600, 600);
         }
     };
 
-    p.draw = () => {
-        p.background(220);
-        p.ellipse(50, 50, 80, 80);
-        p.textSize(32);
-        p.text(context, 10, 30);
+    p5.updateWithProps = props => {
+        if (props.rotation) {
+        rotation = (props.rotation * Math.PI) / 180;
+        }
     };
 
-    p.windowResized = () => {
-        const windowWidth = p.windowWidth;
+    p5.draw = () => {
+        p5.background(220);
+        p5.ellipse(50, 50, 80, 80);
+        p5.textSize(32);
+        p5.text(context, 10, 30);
+    };
+
+    p5.windowResized = () => {
+        const windowWidth = p5.windowWidth;
         // console.log('windowWidth', windowWidth);
 
         if (windowWidth < 600) {
-            p.resizeCanvas(windowWidth -60, windowWidth -60);
+            p5.resizeCanvas(windowWidth -60, windowWidth -60);
         }
     };
 };
