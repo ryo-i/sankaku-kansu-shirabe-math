@@ -1,7 +1,8 @@
 import React, { useState, useEffect }  from 'react';
 import styled from 'styled-components';
-import { P5WrapperProps } from 'react-p5-wrapper'
-import sketch from '../modules/sketch/unitCircle'
+import { P5WrapperProps } from 'react-p5-wrapper';
+import sketch from '../modules/sketch/unitCircle';
+import { p2rText, timesClicked } from '../modules/sketch/unitCircle';
 import dynamic from "next/dynamic";
 import { inner } from '../data/data.json';
 
@@ -28,17 +29,28 @@ function Inner() {
   // Hooks
   const [title, setTitle] = useState('内容が無いよう');
   const [text, setText] = useState('へんじがない、ただのしかばねのようだ。');
-  const [rotation, setRotation] = useState(0);
+  const [clickTimes, setClickTimes] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(
+    if (process.browser) {
+      document.body.onkeyup = function(e){
+        if(e.keyCode == 32){
+            console.log(p2rText);
+            console.log(timesClicked);
+            setText(p2rText);
+            setClickTimes(timesClicked);
+        }
+      }
+    }
+
+    /* const interval = setInterval(
       () => setRotation(rotation => rotation + 100),
       100
     );
 
     return () => {
       clearInterval(interval);
-    };
+    }; */
   }, []);
 
   // JSX
@@ -46,10 +58,15 @@ function Inner() {
     <>
       <section>
         <figure id="unitCircle">
-          <ReactP5Wrapper sketch={sketch} rotation={rotation} text={data.text} />
+          <ReactP5Wrapper
+            sketch={sketch}
+            r2pText={data.text}
+          />
         </figure>
         <h2>{ title }</h2>
         <p>{ text }</p>
+        <p>※スペースをおしてみて！</p>
+        <p>あなたのクリック数：{ clickTimes }</p>
       </section>
     </>
   );

@@ -1,9 +1,13 @@
 import { P5Instance } from 'react-p5-wrapper'
 
 
+export let p2rText: string = '';
+export let timesClicked = 0;
+
+
 const unitCircle = (p5: P5Instance) => {
-    let text: string = '';
     let rotation: number = 0;
+    let r2pText: string = '';
 
     p5.setup = () => {
         const windowWidth = p5.windowWidth;
@@ -21,16 +25,21 @@ const unitCircle = (p5: P5Instance) => {
             rotation = (props.rotation * Math.PI) / 180;
         }
 
-        if (props.text) {
-            text = props.text;
+        if (props.r2pText) {
+            r2pText = props.r2pText;
         }
     };
+
+    p5.mouseClicked = function() {
+        p2rText = 'p5.jsからReactへ';
+        timesClicked++;
+    }
 
     p5.draw = () => {
         p5.background(220);
         p5.ellipse(50, 50, 80, 80);
         p5.textSize(32);
-        p5.text(text, 10, 30);
+        p5.text(r2pText, 10, 30);
     };
 
     p5.windowResized = () => {
