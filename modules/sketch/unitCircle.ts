@@ -1,10 +1,9 @@
 import { P5Instance } from 'react-p5-wrapper'
 
 
-
 const unitCircle = (p5: P5Instance) => {
-    const context = 'test';
-    let rotation = 0;
+    let text: string = '';
+    let rotation: number = 0;
 
     p5.setup = () => {
         const windowWidth = p5.windowWidth;
@@ -17,9 +16,13 @@ const unitCircle = (p5: P5Instance) => {
         }
     };
 
-    p5.updateWithProps = props => {
+    p5.updateWithProps = (props) => {
         if (props.rotation) {
-        rotation = (props.rotation * Math.PI) / 180;
+            rotation = (props.rotation * Math.PI) / 180;
+        }
+
+        if (props.text) {
+            text = props.text;
         }
     };
 
@@ -27,7 +30,7 @@ const unitCircle = (p5: P5Instance) => {
         p5.background(220);
         p5.ellipse(50, 50, 80, 80);
         p5.textSize(32);
-        p5.text(context, 10, 30);
+        p5.text(text, 10, 30);
     };
 
     p5.windowResized = () => {

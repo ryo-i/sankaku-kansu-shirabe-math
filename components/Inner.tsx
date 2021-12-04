@@ -46,7 +46,7 @@ function Inner() {
     <>
       <section>
         <figure id="unitCircle">
-          <ReactP5Wrapper sketch={sketch} rotation={rotation} />
+          <ReactP5Wrapper sketch={sketch} rotation={rotation} text={data.text} />
         </figure>
         <h2>{ title }</h2>
         <p>{ text }</p>
