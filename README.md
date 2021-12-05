@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- X軸、Y軸の十字線を引く [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 単位円を描画 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 
