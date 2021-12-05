@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- React、p5.js間の値の受け渡しリファクタリング [#3](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/3)
+- data受け渡し部分のファイルを別名保存（バックアップ） [#3](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/3)
 - やりたいことをイシューに記入 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
