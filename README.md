@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- figure周りの見た目を整える [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- X軸、Y軸の十字線を引く [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 

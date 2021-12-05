@@ -40,6 +40,10 @@ const unitCircle = (p5: P5Instance) => {
         p5.textSize(32);
         p5.text(r2pText, 10, 30);
         p5.text(countTimes + '秒経過', 10, 70);
+
+        // X軸、Y軸の十字線
+        p5.line(0, p5.height /2, p5.width, p5.height /2);
+        p5.line(p5.width /2, 0,  p5.width /2, p5.height);
     };
 
     p5.windowResized = () => {
