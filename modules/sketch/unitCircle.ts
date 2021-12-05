@@ -35,7 +35,7 @@ const unitCircle = (p5: P5Instance) => {
     }
 
     p5.draw = () => {
-        p5.background(220);
+        p5.background('#eee');
         p5.ellipse(50, 50, 80, 80);
         p5.textSize(32);
         p5.text(r2pText, 10, 30);

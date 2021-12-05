@@ -19,8 +19,10 @@ const data = {
 
 
 // CSS in JS
-const H2 = styled.h2`
-  color: red;
+const UnitCircle = styled.figure`
+  canvas {
+    border-radius: 10px;
+  }
 `;
 
 
@@ -56,14 +58,14 @@ function Inner() {
   // JSX
   return (
     <>
+      <UnitCircle id="unitCircle">
+        <ReactP5Wrapper
+          sketch={sketch}
+          r2pText={data.text}
+          countTimes={countTimes}
+        />
+      </UnitCircle>
       <section>
-        <figure id="unitCircle">
-          <ReactP5Wrapper
-            sketch={sketch}
-            r2pText={data.text}
-            countTimes={countTimes}
-          />
-        </figure>
         <h2>{ title }</h2>
         <p>{ text }</p>
         <p>あなたのクリック数：{ clickTimes }</p>
