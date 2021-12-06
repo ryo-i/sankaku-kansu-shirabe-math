@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 単位円を描画 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 原点、交点、半径の線を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 

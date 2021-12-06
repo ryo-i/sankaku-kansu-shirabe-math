@@ -36,18 +36,41 @@ const unitCircle = (p5: P5Instance) => {
 
     p5.draw = () => {
         p5.fill('#000');
+        p5.stroke('#000');
+        p5.strokeWeight(1);
         p5.background('#eee');
-        p5.textSize(32);
+
+        /* p5.textSize(32);
         p5.text(r2pText, 10, 30);
-        p5.text(countTimes + '秒経過', 10, 70);
+        p5.text(countTimes + '秒経過', 10, 70); */
+
+        const height = p5.height;
+        const width = p5.width;
+        const xAxis = height * 0.5;
+        const yAxis = width * 0.5;
+        const radius = 0.8;
+        const point = 0.03;
 
         // X軸、Y軸の十字線
-        p5.line(0, p5.height /2, p5.width, p5.height /2);
-        p5.line(p5.width /2, 0,  p5.width /2, p5.height);
+        p5.line(0, xAxis, width, xAxis);
+        p5.line(yAxis, 0,  yAxis, height);
 
         // 単位円
         p5.noFill();
-        p5.ellipse(p5.width * 0.5, p5.height * 0.5, p5.width * 0.8, p5.height * 0.8);
+        p5.ellipse(yAxis, xAxis, width * radius, height * radius);
+
+        // 半径
+        p5.stroke('#999');
+        p5.strokeWeight(4);
+        p5.line(yAxis, xAxis, yAxis + (yAxis * radius), xAxis);
+
+        // 原点
+        p5.fill('#A63744');
+        p5.noStroke();
+        p5.ellipse(yAxis, xAxis, width * point, height * point);
+
+        // 交点
+        p5.ellipse(yAxis + (yAxis * radius), xAxis, width * point, height * point);
     };
 
     p5.windowResized = () => {
