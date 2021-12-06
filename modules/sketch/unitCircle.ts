@@ -40,10 +40,6 @@ const unitCircle = (p5: P5Instance) => {
         p5.strokeWeight(1);
         p5.background('#eee');
 
-        /* p5.textSize(32);
-        p5.text(r2pText, 10, 30);
-        p5.text(countTimes + '秒経過', 10, 70); */
-
         const height = p5.height;
         const width = p5.width;
         const xAxis = height * 0.5;
@@ -58,6 +54,13 @@ const unitCircle = (p5: P5Instance) => {
         // 単位円
         p5.noFill();
         p5.ellipse(yAxis, xAxis, width * radius, height * radius);
+
+        // X軸、Y軸のテキスト
+        p5.textSize(14);
+        p5.noStroke();
+        p5.fill('#000');
+        p5.text('X', width - 20, xAxis - 5);
+        p5.text('Y', yAxis + 5, 20);
 
         // 半径
         p5.stroke('#999');
