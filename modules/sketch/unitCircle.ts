@@ -55,12 +55,24 @@ const unitCircle = (p5: P5Instance) => {
         p5.noFill();
         p5.ellipse(yAxis, xAxis, width * radius, height * radius);
 
-        // X軸、Y軸のテキスト
+        // 三角関数
+        const angle: number = 15;
+        const radian: number = angle * (p5.PI / 180);
+        const sin: number = p5.sin(radian);
+        const cos: number = p5.cos(radian);
+        const tan: number = p5.tan(radian);
+
+        // テキスト
         p5.textSize(14);
         p5.noStroke();
         p5.fill('#000');
         p5.text('X', width - 20, xAxis - 5);
         p5.text('Y', yAxis + 5, 20);
+        p5.text('angle: ' + angle, 5, 20);
+        p5.text('radian: ' + radian.toFixed(4), 5, 40);
+        p5.text('sin: ' + sin.toFixed(4), 5, 60);
+        p5.text('cos: ' + cos.toFixed(4), 5, 80);
+        p5.text('tan: ' + tan.toFixed(4), 5, 100);
 
         // 半径
         p5.stroke('#999');

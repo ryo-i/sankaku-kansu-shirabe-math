@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 十字線にX軸、Y軸のテキストで表示 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 15度のラジアン&三角関数計算結果を表示 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 

@@ -20,11 +20,7 @@ const data = {
 
 // CSS in JS
 const UnitCircle = styled.figure`
-  canvas {
-    margin: 0 auto;
-    border-radius: 10px;
-    display: block;
-  }
+
 `;
 
 
