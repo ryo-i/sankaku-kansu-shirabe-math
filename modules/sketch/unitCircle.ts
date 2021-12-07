@@ -40,20 +40,18 @@ const unitCircle = (p5: P5Instance) => {
         p5.strokeWeight(1);
         p5.background('#eee');
 
-        const height = p5.height;
-        const width = p5.width;
-        const xAxis = height * 0.5;
-        const yAxis = width * 0.5;
+        const canvasSize = p5.width;
+        const axis = canvasSize * 0.5;
         const radius = 0.8;
         const point = 0.03;
 
         // X軸、Y軸の十字線
-        p5.line(0, xAxis, width, xAxis);
-        p5.line(yAxis, 0,  yAxis, height);
+        p5.line(0, axis, canvasSize, axis);
+        p5.line(axis, 0,  axis, canvasSize);
 
         // 単位円
         p5.noFill();
-        p5.ellipse(yAxis, xAxis, width * radius, height * radius);
+        p5.ellipse(axis, axis, canvasSize * radius, canvasSize * radius);
 
         // 三角関数
         const angle: number = 15;
@@ -66,8 +64,8 @@ const unitCircle = (p5: P5Instance) => {
         p5.textSize(14);
         p5.noStroke();
         p5.fill('#000');
-        p5.text('X', width - 20, xAxis - 5);
-        p5.text('Y', yAxis + 5, 20);
+        p5.text('X', canvasSize - 20, axis - 5);
+        p5.text('Y', axis + 5, 20);
         p5.text('angle: ' + angle, 5, 20);
         p5.text('radian: ' + radian.toFixed(4), 5, 40);
         p5.text('sin: ' + sin.toFixed(4), 5, 60);
@@ -77,15 +75,15 @@ const unitCircle = (p5: P5Instance) => {
         // 半径
         p5.stroke('#999');
         p5.strokeWeight(4);
-        p5.line(yAxis, xAxis, yAxis + (yAxis * radius), xAxis);
+        p5.line(axis, axis, axis + (cos * axis * radius), axis - (sin * axis * radius));
 
         // 原点
         p5.fill('#A63744');
         p5.noStroke();
-        p5.ellipse(yAxis, xAxis, width * point, height * point);
+        p5.ellipse(axis, axis, canvasSize * point, canvasSize * point);
 
         // 交点
-        p5.ellipse(yAxis + (yAxis * radius), xAxis, width * point, height * point);
+        p5.ellipse(axis + (cos * axis * radius), axis - (sin * axis * radius), canvasSize * point, canvasSize * point);
     };
 
     p5.windowResized = () => {

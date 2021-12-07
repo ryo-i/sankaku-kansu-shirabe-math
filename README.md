@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 15度のラジアン&三角関数計算結果を表示 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 15度位置を半径と交点に反映 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 
