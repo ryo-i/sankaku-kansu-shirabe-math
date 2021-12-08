@@ -41,17 +41,22 @@ const unitCircle = (p5: P5Instance) => {
         p5.background('#eee');
 
         const canvasSize = p5.width;
-        const axis = canvasSize * 0.5;
-        const radius = 0.8;
-        const point = 0.03;
+        const canvasHalfSize = canvasSize * 0.5;
+        const radiusRatio = 0.8;
+        const pointRatio = 0.03;
 
         // X軸、Y軸の十字線
-        p5.line(0, axis, canvasSize, axis);
-        p5.line(axis, 0,  axis, canvasSize);
+        p5.line(0, canvasHalfSize, canvasSize, canvasHalfSize);
+        p5.line(canvasHalfSize, 0,  canvasHalfSize, canvasSize);
 
         // 単位円
         p5.noFill();
-        p5.ellipse(axis, axis, canvasSize * radius, canvasSize * radius);
+        p5.ellipse(
+            canvasHalfSize,
+            canvasHalfSize,
+            canvasSize * radiusRatio,
+            canvasSize * radiusRatio
+        );
 
         // 三角関数
         const angle: number = 15;
@@ -63,22 +68,37 @@ const unitCircle = (p5: P5Instance) => {
         // 半径
         p5.stroke('#999');
         p5.strokeWeight(4);
-        p5.line(axis, axis, axis + (cos * axis * radius), axis - (sin * axis * radius));
+        p5.line(
+            canvasHalfSize,
+            canvasHalfSize,
+            canvasHalfSize + (cos * canvasHalfSize * radiusRatio),
+            canvasHalfSize - (sin * canvasHalfSize * radiusRatio)
+        );
 
         // 原点
         p5.fill('#A63744');
         p5.noStroke();
-        p5.ellipse(axis, axis, canvasSize * point, canvasSize * point);
+        p5.ellipse(
+            canvasHalfSize,
+            canvasHalfSize,
+            canvasSize * pointRatio,
+            canvasSize * pointRatio
+        );
 
         // 交点
-        p5.ellipse(axis + (cos * axis * radius), axis - (sin * axis * radius), canvasSize * point, canvasSize * point);
+        p5.ellipse(
+            canvasHalfSize + (cos * canvasHalfSize * radiusRatio),
+            canvasHalfSize - (sin * canvasHalfSize * radiusRatio),
+            canvasSize * pointRatio,
+            canvasSize * pointRatio
+        );
 
         // テキスト
         p5.textSize(14);
         p5.noStroke();
         p5.fill('#000');
-        p5.text('X', canvasSize - 20, axis - 5);
-        p5.text('Y', axis + 5, 20);
+        p5.text('X', canvasSize - 20, canvasHalfSize - 5);
+        p5.text('Y', canvasHalfSize + 5, 20);
         p5.text('angle: ' + angle, 5, 20);
         p5.text('radian: ' + radian.toFixed(4), 5, 40);
         p5.text('sin: ' + sin.toFixed(4), 5, 60);

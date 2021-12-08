@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- テキストの重なり順を一番手前に [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- わかりにくい変数名を変更 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 
