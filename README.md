@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 重複した記述を変数化 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- X座標、Y座標の線を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 

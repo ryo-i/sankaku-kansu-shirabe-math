@@ -67,9 +67,26 @@ const unitCircle = (p5: P5Instance) => {
         const cos: number = p5.cos(radian);
         const tan: number = p5.tan(radian);
 
+        // X座標
+        p5.stroke('#aaa');
+        p5.line(
+            canvasHalfSize + (cos * radiusSize),
+            canvasHalfSize,
+            canvasHalfSize + (cos * radiusSize),
+            canvasHalfSize - (sin * radiusSize)
+        );
+
+        // Y座標
+        p5.line(
+            canvasHalfSize,
+            canvasHalfSize - (sin * radiusSize),
+            canvasHalfSize + (cos * radiusSize),
+            canvasHalfSize - (sin * radiusSize)
+        );
+
         // 半径
         p5.stroke('#999');
-        p5.strokeWeight(4);
+        p5.strokeWeight(3);
         p5.line(
             canvasHalfSize,
             canvasHalfSize,
