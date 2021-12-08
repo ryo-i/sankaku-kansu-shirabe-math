@@ -43,7 +43,9 @@ const unitCircle = (p5: P5Instance) => {
         const canvasSize = p5.width;
         const canvasHalfSize = canvasSize * 0.5;
         const radiusRatio = 0.8;
+        const radiusSize = canvasHalfSize * radiusRatio;
         const pointRatio = 0.03;
+        const pointSize = canvasSize * pointRatio;
 
         // X軸、Y軸の十字線
         p5.line(0, canvasHalfSize, canvasSize, canvasHalfSize);
@@ -71,8 +73,8 @@ const unitCircle = (p5: P5Instance) => {
         p5.line(
             canvasHalfSize,
             canvasHalfSize,
-            canvasHalfSize + (cos * canvasHalfSize * radiusRatio),
-            canvasHalfSize - (sin * canvasHalfSize * radiusRatio)
+            canvasHalfSize + (cos * radiusSize),
+            canvasHalfSize - (sin * radiusSize)
         );
 
         // 原点
@@ -81,16 +83,16 @@ const unitCircle = (p5: P5Instance) => {
         p5.ellipse(
             canvasHalfSize,
             canvasHalfSize,
-            canvasSize * pointRatio,
-            canvasSize * pointRatio
+            pointSize,
+            pointSize
         );
 
         // 交点
         p5.ellipse(
-            canvasHalfSize + (cos * canvasHalfSize * radiusRatio),
-            canvasHalfSize - (sin * canvasHalfSize * radiusRatio),
-            canvasSize * pointRatio,
-            canvasSize * pointRatio
+            canvasHalfSize + (cos * radiusSize),
+            canvasHalfSize - (sin * radiusSize),
+            pointSize,
+            pointSize
         );
 
         // テキスト
