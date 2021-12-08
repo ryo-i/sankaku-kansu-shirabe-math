@@ -60,18 +60,6 @@ const unitCircle = (p5: P5Instance) => {
         const cos: number = p5.cos(radian);
         const tan: number = p5.tan(radian);
 
-        // テキスト
-        p5.textSize(14);
-        p5.noStroke();
-        p5.fill('#000');
-        p5.text('X', canvasSize - 20, axis - 5);
-        p5.text('Y', axis + 5, 20);
-        p5.text('angle: ' + angle, 5, 20);
-        p5.text('radian: ' + radian.toFixed(4), 5, 40);
-        p5.text('sin: ' + sin.toFixed(4), 5, 60);
-        p5.text('cos: ' + cos.toFixed(4), 5, 80);
-        p5.text('tan: ' + tan.toFixed(4), 5, 100);
-
         // 半径
         p5.stroke('#999');
         p5.strokeWeight(4);
@@ -84,6 +72,18 @@ const unitCircle = (p5: P5Instance) => {
 
         // 交点
         p5.ellipse(axis + (cos * axis * radius), axis - (sin * axis * radius), canvasSize * point, canvasSize * point);
+
+        // テキスト
+        p5.textSize(14);
+        p5.noStroke();
+        p5.fill('#000');
+        p5.text('X', canvasSize - 20, axis - 5);
+        p5.text('Y', axis + 5, 20);
+        p5.text('angle: ' + angle, 5, 20);
+        p5.text('radian: ' + radian.toFixed(4), 5, 40);
+        p5.text('sin: ' + sin.toFixed(4), 5, 60);
+        p5.text('cos: ' + cos.toFixed(4), 5, 80);
+        p5.text('tan: ' + tan.toFixed(4), 5, 100);
     };
 
     p5.windowResized = () => {
