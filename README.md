@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- X座標、Y座標の線を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 三角関数で作られる三角形を描画 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 
