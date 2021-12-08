@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 三角関数で作られる三角形を描画 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 半径の半分(0.5)のメモリを追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 

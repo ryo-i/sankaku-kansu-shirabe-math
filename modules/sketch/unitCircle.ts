@@ -46,6 +46,7 @@ const unitCircle = (p5: P5Instance) => {
         const radiusSize = canvasHalfSize * radiusRatio;
         const pointRatio = 0.03;
         const pointSize = canvasSize * pointRatio;
+        const memorySize = 5;
 
         // 単位円
         p5.noFill();
@@ -95,6 +96,33 @@ const unitCircle = (p5: P5Instance) => {
             canvasHalfSize - (sin * radiusSize),
             canvasHalfSize + (cos * radiusSize),
             canvasHalfSize - (sin * radiusSize)
+        );
+
+        // 半径の半分(0.5)のメモリ
+        p5.stroke('#000');
+        p5.line(
+            canvasHalfSize + (radiusSize * 0.5),
+            canvasHalfSize - memorySize,
+            canvasHalfSize + (radiusSize * 0.5),
+            canvasHalfSize + memorySize,
+        );
+        p5.line(
+            canvasHalfSize - memorySize,
+            canvasHalfSize - (radiusSize * 0.5),
+            canvasHalfSize + memorySize,
+            canvasHalfSize - (radiusSize * 0.5),
+        );
+        p5.line(
+            canvasHalfSize - (radiusSize * 0.5),
+            canvasHalfSize - memorySize,
+            canvasHalfSize - (radiusSize * 0.5),
+            canvasHalfSize + memorySize,
+        );
+        p5.line(
+            canvasHalfSize - memorySize,
+            canvasHalfSize + (radiusSize * 0.5),
+            canvasHalfSize + memorySize,
+            canvasHalfSize + (radiusSize * 0.5),
         );
 
         // 半径
