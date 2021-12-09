@@ -19,8 +19,12 @@ const data = {
 
 
 // CSS in JS
-const H2 = styled.h2`
-  color: red;
+const UnitCircle = styled.figure`
+  canvas {
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+  }
 `;
 
 
@@ -56,15 +60,15 @@ function Inner() {
   // JSX
   return (
     <>
-        <figure>
+        <UnitCircle>
           <ReactP5Wrapper
             sketch={sketch}
             r2pText={data.text}
             countTimes={countTimes}
           />
-        </figure>
+        </UnitCircle>
         <section>
-          <H2>{ title }</H2>
+          <h2>{ title }</h2>
           <p>{ text }</p>
           <p>あなたのクリック数：{ clickTimes }</p>
         </section>

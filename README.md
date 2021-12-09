@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- CSS対策でInnerコンポーネントのファイル名を変更 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- canvas要素にCSS設定 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 
