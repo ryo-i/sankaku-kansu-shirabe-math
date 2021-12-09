@@ -1,13 +1,8 @@
 import { P5Instance } from 'react-p5-wrapper'
 
 
-export let p2rText: string = 'p5.jsからReactへ';
-export let countClicks = 0;
-
-
 const unitCircle = (p5: P5Instance) => {
-    let countTimes: number = 0;
-    let r2pText: string = '';
+    let angle: number = 0;
 
     p5.setup = () => {
         const windowWidth = p5.windowWidth;
@@ -21,17 +16,14 @@ const unitCircle = (p5: P5Instance) => {
     };
 
     p5.updateWithProps = (props) => {
-        if (props.r2pText) {
-            r2pText = props.r2pText;
-        }
-
-        if (props.countTimes) {
-            countTimes = props.countTimes;
+        if (props.angle || props.angle === 0) {
+            angle = props.angle;
+            // console.log('angle', angle);
         }
     };
 
     p5.mouseClicked = function() {
-        countClicks++;
+        // countClicks++;
     }
 
     p5.draw = () => {
@@ -45,7 +37,6 @@ const unitCircle = (p5: P5Instance) => {
         const memorySize = 5;
 
         // 三角関数
-        const angle: number = 30;
         const radian: number = angle * (p5.PI / 180);
         const sin: number = p5.sin(radian);
         const cos: number = p5.cos(radian);
