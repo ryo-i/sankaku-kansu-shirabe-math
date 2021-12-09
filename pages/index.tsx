@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Header from '../components/Header';
-import Inner from '../components/Inner';
+import Inner from '../components/Inner_new';
 import Footer from '../components/Footer';
 import Data from '../data/data.json';
 

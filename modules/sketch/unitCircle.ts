@@ -35,11 +35,7 @@ const unitCircle = (p5: P5Instance) => {
     }
 
     p5.draw = () => {
-        p5.fill('#000');
-        p5.stroke('#000');
-        p5.strokeWeight(1);
-        p5.background('#eee');
-
+        // サイズ設定
         const canvasSize = p5.width;
         const canvasHalfSize = canvasSize * 0.5;
         const radiusRatio = 0.8;
@@ -48,7 +44,21 @@ const unitCircle = (p5: P5Instance) => {
         const pointSize = canvasSize * pointRatio;
         const memorySize = 5;
 
+        // 三角関数
+        const angle: number = 30;
+        const radian: number = angle * (p5.PI / 180);
+        const sin: number = p5.sin(radian);
+        const cos: number = p5.cos(radian);
+        const tan: number = p5.tan(radian);
+
+        // 初期設定
+        p5.fill('#000');
+        p5.stroke('#000');
+        p5.strokeWeight(1);
+        p5.background('#eee');
+
         // 単位円
+        p5.stroke('#666');
         p5.noFill();
         p5.ellipse(
             canvasHalfSize,
@@ -56,13 +66,6 @@ const unitCircle = (p5: P5Instance) => {
             canvasSize * radiusRatio,
             canvasSize * radiusRatio
         );
-
-        // 三角関数
-        const angle: number = 30;
-        const radian: number = angle * (p5.PI / 180);
-        const sin: number = p5.sin(radian);
-        const cos: number = p5.cos(radian);
-        const tan: number = p5.tan(radian);
 
         // 三角形
         p5.noStroke();
@@ -77,7 +80,7 @@ const unitCircle = (p5: P5Instance) => {
         );
 
         // X軸、Y軸の十字線
-        p5.stroke('#000');
+        p5.stroke('#666');
         p5.line(0, canvasHalfSize, canvasSize, canvasHalfSize);
         p5.line(canvasHalfSize, 0,  canvasHalfSize, canvasSize);
 
@@ -99,7 +102,7 @@ const unitCircle = (p5: P5Instance) => {
         );
 
         // 半径の半分(0.5)のメモリ
-        p5.stroke('#000');
+        p5.stroke('#666');
         p5.line(
             canvasHalfSize + (radiusSize * 0.5),
             canvasHalfSize - memorySize,

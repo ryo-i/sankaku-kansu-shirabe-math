@@ -19,8 +19,8 @@ const data = {
 
 
 // CSS in JS
-const UnitCircle = styled.figure`
-
+const H2 = styled.h2`
+  color: red;
 `;
 
 
@@ -56,18 +56,18 @@ function Inner() {
   // JSX
   return (
     <>
-      <UnitCircle id="unitCircle">
-        <ReactP5Wrapper
-          sketch={sketch}
-          r2pText={data.text}
-          countTimes={countTimes}
-        />
-      </UnitCircle>
-      <section>
-        <h2>{ title }</h2>
-        <p>{ text }</p>
-        <p>あなたのクリック数：{ clickTimes }</p>
-      </section>
+        <figure>
+          <ReactP5Wrapper
+            sketch={sketch}
+            r2pText={data.text}
+            countTimes={countTimes}
+          />
+        </figure>
+        <section>
+          <H2>{ title }</H2>
+          <p>{ text }</p>
+          <p>あなたのクリック数：{ clickTimes }</p>
+        </section>
     </>
   );
 }

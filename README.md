@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 半径の半分(0.5)のメモリを追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- CSS対策でInnerコンポーネントのファイル名を変更 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 
