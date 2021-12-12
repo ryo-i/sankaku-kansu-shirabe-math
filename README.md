@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- input(number)のmin, maxを優先させる処理 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 円周率、ラジアン←→角度変換の計算式を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 
