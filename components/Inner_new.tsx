@@ -34,11 +34,18 @@ const Generator = styled.section`
 // Component
 function Inner() {
   // Hooks
-  const [angle, setAngle] = useState(0);
+  const [angle, setAngle] = useState(30);
 
   // Change Angle
   const changeAngle = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const getValue: number = Number(e.target.value);
+    let getValue: number = Number(e.target.value);
+
+    if (getValue > 360) {
+      getValue = 360;
+    } else if (getValue < -360) {
+      getValue = -360;
+    }
+
     setAngle(getValue);
   };
 
@@ -52,8 +59,11 @@ function Inner() {
           />
         </UnitCircle>
         <Generator>
-          <p>角度：<input type="number" value={angle} min="-360" max="360" onChange={changeAngle} />度</p>
-          <input type="range" name="hue" value={angle} min="-360" max="360" onChange={changeAngle} />
+          <dl>
+            <dt>角度</dt>
+            <dd><input type="number" value={angle} min="-360" max="360" onChange={changeAngle} />度（-360度〜360度）<br />
+            <input type="range" name="hue" value={angle} min="-360" max="360" onChange={changeAngle} /></dd>
+          </dl>
         </Generator>
     </>
   );
