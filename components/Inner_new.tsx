@@ -21,6 +21,10 @@ const UnitCircle = styled.figure`
 `;
 
 const Generator = styled.section`
+  input[type='number'] {
+    margin: 0 5px 0 0;
+    border: 1px solid #ccc;
+  }
   input[type='range'] {
     width: 100%;
   }
@@ -48,7 +52,7 @@ function Inner() {
           />
         </UnitCircle>
         <Generator>
-          <p>角度：{ angle }度</p>
+          <p>角度：<input type="number" value={angle} min="-360" max="360" onChange={changeAngle} />度</p>
           <input type="range" name="hue" value={angle} min="-360" max="360" onChange={changeAngle} />
         </Generator>
     </>

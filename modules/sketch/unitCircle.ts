@@ -8,10 +8,10 @@ const unitCircle = (p5: P5Instance) => {
         const windowWidth = p5.windowWidth;
         // console.log('windowWidth', windowWidth);
 
-        if (windowWidth < 600) {
+        if (windowWidth < 500) {
             p5.createCanvas(windowWidth -60, windowWidth -60);
         } else {
-            p5.createCanvas(600, 600);
+            p5.createCanvas(500, 500);
         }
     };
 

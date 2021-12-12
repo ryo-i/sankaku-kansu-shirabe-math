@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- input(range)とcanvasの連携で角度を動的に変える [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- input(number)を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 
