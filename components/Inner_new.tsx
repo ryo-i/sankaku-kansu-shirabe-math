@@ -39,7 +39,6 @@ function Inner() {
   // Hooks
   const [angle, setAngle] = useState(30);
   const [radian, setRadian] = useState(0);
-  const [angle2, setAngle2] = useState(0);
   const [sin, setSin] = useState(0);
   const [cos, setCos] = useState(0);
   const [tan, setTan] = useState(0);
@@ -47,23 +46,13 @@ function Inner() {
 
   // 円周率
   let pi:number = Math.PI;
-  // pi = Number(pi.toFixed(4));
-
-
-  // ラジアン→角度
-  const radian2angle = (radian) => {
-    let getAngle: number = radian / (Math.PI / 180);
-    // getAngle = Number(getAngle.toFixed(4));
-    setAngle2(getAngle);
-  };
 
 
   // 角度→ラジアン
   const angle2radian = (angle) => {
-    let getRadian: number = angle * (Math.PI / 180);
+    let getRadian: number = angle * (pi / 180);
     // getRadian = Number(getRadian.toFixed(4));
     setRadian(getRadian);
-    radian2angle(getRadian);
   };
 
   // 三角比
@@ -89,7 +78,6 @@ function Inner() {
 
   // 初期設定
   useEffect(() => {
-    angle2radian(angle);
     angle2radian(angle);
     trigonometricRatio(radian);
   });
@@ -120,7 +108,7 @@ function Inner() {
             </dd>
             <dt>ラジアン→角度</dt>
             <dd>
-              radian / (Math.PI / 180) = {angle2}
+              radian / (Math.PI / 180) = {radian / (pi / 180)}
             </dd>
             <hr />
             <dt>サイン(Y軸, 高さ)</dt>
