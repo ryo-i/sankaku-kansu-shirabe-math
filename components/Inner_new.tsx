@@ -37,6 +37,9 @@ function Inner() {
   const [angle, setAngle] = useState(30);
   const [radian, setRadian] = useState(0);
   const [angle2, setAngle2] = useState(0);
+  const [sin, setSin] = useState(0);
+  const [cos, setCos] = useState(0);
+  const [tan, setTan] = useState(0);
 
 
   // 円周率
@@ -49,7 +52,7 @@ function Inner() {
     let getAngle: number = radian / (Math.PI / 180);
     // getAngle = Number(getAngle.toFixed(4));
     setAngle2(getAngle);
-  }
+  };
 
 
   // 角度→ラジアン
@@ -58,8 +61,14 @@ function Inner() {
     // getRadian = Number(getRadian.toFixed(4));
     setRadian(getRadian);
     radian2angle(getRadian);
-  }
+  };
 
+  // 三角比
+  const trigonometricRatio = (radian) => {
+    setSin(Math.sin(radian));
+    setCos(Math.cos(radian));
+    setTan(Math.tan(radian));
+  }
 
   // 角度変更
   const changeAngle = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -72,15 +81,15 @@ function Inner() {
     }
 
     setAngle(getValue);
-    angle2radian(getValue);
   };
 
 
   // 初期設定
   useEffect(() => {
     angle2radian(angle);
-  }
-  ,[]);
+    angle2radian(angle);
+    trigonometricRatio(radian);
+  });
 
 
   // JSX
@@ -109,6 +118,12 @@ function Inner() {
             <dd>
             radian / (Math.PI / 180) = {angle2}
             </dd>
+            <dt>サイン</dt>
+            <dd>Math.sin(angle) = {sin}</dd>
+            <dt>コサイン</dt>
+            <dd>Math.cos(angle) = {cos}</dd>
+            <dt>タンジェント</dt>
+            <dd>Math.tan(angle) = {tan}</dd>
           </dl>
         </Result>
     </>
