@@ -109,6 +109,7 @@ function Inner() {
             <dt>角度</dt>
             <dd><input type="number" value={angle} min="-360" max="360" onChange={changeAngle} />度（-360度〜360度）<br />
             <input type="range" name="hue" value={angle} min="-360" max="360" onChange={changeAngle} /></dd>
+            <hr />
             <dt>円周率</dt>
             <dd>
             Math.PI = {pi}
@@ -121,20 +122,40 @@ function Inner() {
             <dd>
               radian / (Math.PI / 180) = {angle2}
             </dd>
+            <hr />
             <dt>サイン(Y軸, 高さ)</dt>
             <dd>
-              Math.sin(angle) = {sin}<br />
-              高さ(sin) / 斜辺(1) = {sin / 1}
+              Math.sin(angle) = {sin}
             </dd>
             <dt>コサイン(X軸, 底辺)</dt>
             <dd>
-              Math.cos(angle) = {cos}<br />
-              底辺(cos) / 斜辺(1) = {cos /1}
+              Math.cos(angle) = {cos}
             </dd>
             <dt>タンジェント(傾き)</dt>
             <dd>
-              Math.tan(angle) = {tan}<br />
-              高さ(sin) / 底辺(cos) = {sin / cos}
+              Math.tan(angle) = {tan}
+            </dd>
+            <hr />
+            <dt>三角比(サイン)</dt>
+            <dd>
+              高さ(sin) / 斜辺(1) = サイン<br />
+              {sin} / 1  = {sin / 1}
+            </dd>
+            <dt>三角比(コサイン)</dt>
+            <dd>
+              底辺(cos) / 斜辺(1) = コサイン<br />
+              {cos} / 1 = {cos / 1}
+            </dd>
+            <dt>三角比(タンジェント)</dt>
+            <dd>
+              高さ(sin) / 底辺(cos) = タンジェント<br />
+              {sin} / {cos} = {sin / cos}
+            </dd>
+            <hr />
+            <dt>三平方の定理</dt>
+            <dd>
+              底辺(con)<sup>2</sup> + 高さ(sin)<sup>2</sup> = 斜辺(1)<br />
+              ({cos} * {cos}) + ({sin} * {sin}) = {(cos * cos) + (sin * sin)}
             </dd>
           </dl>
         </Result>
