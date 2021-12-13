@@ -155,8 +155,10 @@ function Inner() {
             <dt>三平方の定理</dt>
             <dd>
               底辺(con)<sup>2</sup> + 高さ(sin)<sup>2</sup> = 斜辺(1)<br />
-              ({cos} * {cos}) + ({sin} * {sin}) = {(cos * cos) + (sin * sin)}
+              ({cos} ** 2) + ({sin} ** 2) = {(cos ** 2) + (sin ** 2)}
             </dd>
+            <hr />
+
           </dl>
         </Result>
     </>

@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 三平方の定理を追加、区切り線追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 三平方の定理のべき乗の書き方を修正 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 
