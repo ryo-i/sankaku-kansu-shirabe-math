@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 三角比（サイン、コサイン、タンジェント）の計算式を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 三角比の底辺、高さ、斜辺からの計算式を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 

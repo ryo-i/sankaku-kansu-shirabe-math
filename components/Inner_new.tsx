@@ -28,6 +28,9 @@ const Result = styled.div`
   input[type='range'] {
     width: 100%;
   }
+  dd {
+    font-size: 12px;
+  }
 `;
 
 
@@ -112,18 +115,27 @@ function Inner() {
             </dd>
             <dt>角度→ラジアン</dt>
             <dd>
-            angle * (Math.PI / 180) = {radian}
+              angle * (Math.PI / 180) = {radian}
             </dd>
             <dt>ラジアン→角度</dt>
             <dd>
-            radian / (Math.PI / 180) = {angle2}
+              radian / (Math.PI / 180) = {angle2}
             </dd>
-            <dt>サイン</dt>
-            <dd>Math.sin(angle) = {sin}</dd>
-            <dt>コサイン</dt>
-            <dd>Math.cos(angle) = {cos}</dd>
-            <dt>タンジェント</dt>
-            <dd>Math.tan(angle) = {tan}</dd>
+            <dt>サイン(Y軸, 高さ)</dt>
+            <dd>
+              Math.sin(angle) = {sin}<br />
+              高さ(sin) / 斜辺(1) = {sin / 1}
+            </dd>
+            <dt>コサイン(X軸, 底辺)</dt>
+            <dd>
+              Math.cos(angle) = {cos}<br />
+              底辺(cos) / 斜辺(1) = {cos /1}
+            </dd>
+            <dt>タンジェント(傾き)</dt>
+            <dd>
+              Math.tan(angle) = {tan}<br />
+              高さ(sin) / 底辺(cos) = {sin / cos}
+            </dd>
           </dl>
         </Result>
     </>
