@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 他で使わないラジアン→角度を計算式のみに変更 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 三角比の相互関係を追加（JS計算部分をグレー枠に） [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 
