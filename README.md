@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 三角比の相互関係を追加（JS計算部分をグレー枠に） [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 公式の証明式を折りたたむ、他 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 

@@ -97,7 +97,7 @@ function Inner() {
     <>
         <UnitCircle>
           <dl>
-            <dt>単位円（半径=1）</dt>
+            <dt>単位円(半径=1)</dt>
           </dl>
           <dd>
             <ReactP5Wrapper
@@ -131,12 +131,12 @@ function Inner() {
             </dd>
             <dt>コサイン(cos)</dt>
             <dd>
-              X軸（単位円では底辺）
+              X軸（単位円では底辺）<br />
               <span>Math.cos(rad) = {cos}</span>
             </dd>
             <dt>タンジェント(tan)</dt>
             <dd>
-              X軸とY軸の傾き
+              X軸とY軸の傾き<br />
               <span>Math.tan(rad) = {tan}</span>
             </dd>
             <hr />
@@ -174,25 +174,29 @@ function Inner() {
                   <li>1 + {tan ** 2} = 1 / {cos ** 2}</li>
                   <li>{1 + tan ** 2} = {1 / cos ** 2}</li>
                 </ul>
-              </span>
+              </span><br />
               ※公式①、②の組み合わせで求まる公式<br />
-              <ul>
-                <li>
-                  公式②より<br />
-                  sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1
-                </li>
-                <li>
-                  両辺をcos<sup>2</sup>θで割る<br />
-                  (sin<sup>2</sup>θ / cos<sup>2</sup>θ) + (cos<sup>2</sup>θ / cos<sup>2</sup>θ) = 1 / cos<sup>2</sup>θ
-                </li>
-                <li>約分すると<br />
-                  (sin θ / cos θ)<sup>2</sup> + 1 = 1 / cos<sup>2</sup>θ
-                </li>
-                <li>
-                  公式①よりタンジェントを代入<br />
-                  tan<sup>2</sup>θ + 1 = 1 / cos<sup>2</sup>θ
-                </li>
-              </ul>
+              <details>
+                  <summary>証明</summary>
+                  <ul>
+                    <li>
+                      公式②より<br />
+                      sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1
+                    </li>
+                    <li>
+                      両辺をcos<sup>2</sup>θで割る<br />
+                      (sin<sup>2</sup>θ / cos<sup>2</sup>θ) + (cos<sup>2</sup>θ / cos<sup>2</sup>θ) = 1 / cos<sup>2</sup>θ
+                    </li>
+                    <li>約分すると<br />
+                      (sin θ / cos θ)<sup>2</sup> + 1 = 1 / cos<sup>2</sup>θ
+                    </li>
+                    <li>
+                      公式①よりタンジェントを代入<br />
+                      tan<sup>2</sup>θ + 1 = 1 / cos<sup>2</sup>θ
+                    </li>
+                  </ul>
+              </details>
+
 
             </dd>
 
