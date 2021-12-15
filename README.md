@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 公式の証明式を折りたたむ、他 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- サインからコサイン、タンジェントを求める計算を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 

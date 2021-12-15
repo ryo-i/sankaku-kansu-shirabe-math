@@ -27,14 +27,16 @@ const Result = styled.div`
   }
   input[type='range'] {
     width: 100%;
+    display: block;
   }
   dd {
     font-size: 12px;
+
     span {
       background: #eee;
       padding: 5px;
       border-radius: 5px;
-      display: inline-block;
+      display: block;
       ul {
         margin: 0;
       }
@@ -109,7 +111,7 @@ function Inner() {
         <Result>
           <dl>
             <dt>角度(θ)</dt>
-            <dd><input type="number" value={angle} min="-360" max="360" onChange={changeAngle} />度（-360度〜360度）<br />
+            <dd><input type="number" value={angle} min="-360" max="360" onChange={changeAngle} />度（-360度〜360度）
             <input type="range" name="hue" value={angle} min="-360" max="360" onChange={changeAngle} /></dd>
             <hr />
             <dt>円周率(π)</dt>
@@ -118,64 +120,64 @@ function Inner() {
             </dd>
             <dt>ラジアン(rad)</dt>
             <dd>
-              角度→ラジアン<br/>
-              <span>θ * (Math.PI / 180) = {radian}</span><br/>
+              角度→ラジアン
+              <span>θ * (Math.PI / 180) = {radian}</span>
               ラジアン→角度<br/>
               <span>rad / (Math.PI / 180) = {radian / (pi / 180)}</span>
             </dd>
             <hr />
             <dt>サイン(sin)</dt>
             <dd>
-              Y軸（単位円では高さ）<br />
+              Y軸（単位円では高さ）
               <span>Math.sin(rad) = {sin}</span>
             </dd>
             <dt>コサイン(cos)</dt>
             <dd>
-              X軸（単位円では底辺）<br />
+              X軸（単位円では底辺）
               <span>Math.cos(rad) = {cos}</span>
             </dd>
             <dt>タンジェント(tan)</dt>
             <dd>
-              X軸とY軸の傾き<br />
+              X軸とY軸の傾き
               <span>Math.tan(rad) = {tan}</span>
             </dd>
             <hr />
             <dt>三角比(サイン)</dt>
             <dd>
-              高さ(sin) / 斜辺(1) = サイン<br />
+              高さ(sin) / 斜辺(1) = サイン
               <span>{sin} / 1  = {sin / 1}</span>
             </dd>
             <dt>三角比(コサイン)</dt>
             <dd>
-              底辺(cos) / 斜辺(1) = コサイン<br />
+              底辺(cos) / 斜辺(1) = コサイン
               <span>{cos} / 1 = {cos / 1}</span>
             </dd>
             <dt>三角比(タンジェント)</dt>
             <dd>
-              高さ(sin) / 底辺(cos) = タンジェント<br />
-              <span>{sin} / {cos} = {sin / cos}</span><br />
+              高さ(sin) / 底辺(cos) = タンジェント
+              <span>{sin} / {cos} = {sin / cos}</span>
               ※三角比の相互関係の公式①でもある
             </dd>
             <hr />
             <dt>三平方の定理</dt>
             <dd>
-              底辺(cos)<sup>2</sup> + 高さ(sin)<sup>2</sup> = 斜辺(1)<br />
-              <span>({cos} ** 2) + ({sin} ** 2) = {(cos ** 2) + (sin ** 2)}</span><br />
+              底辺(cos)<sup>2</sup> + 高さ(sin)<sup>2</sup> = 斜辺(1)
+              <span>({cos} ** 2) + ({sin} ** 2) = {(cos ** 2) + (sin ** 2)}</span>
               ※三角比の相互関係の公式②でもある
             </dd>
             <hr />
             <dt>三角比の相互関係</dt>
             <dd>
               三角比の相互関係の公式③<br />
-              1 + tan<sup>2</sup>θ = 1 / cos<sup>2</sup>θ<br />
+              1 + tan<sup>2</sup>θ = 1 / cos<sup>2</sup>θ
               <span>
                 <ul>
-                  <li>1 + ({tan} ** 2) = 1 / ({cos} ** 2)</li>
-                  <li>1 + {tan ** 2} = 1 / {cos ** 2}</li>
-                  <li>{1 + tan ** 2} = {1 / cos ** 2}</li>
+                  <li>1 + Math.pow({tan}, 2) = 1 / Math.pow({cos}, 2)</li>
+                  <li>1 + {Math.pow(tan, 2)} = 1 / {Math.pow(cos, 2)}</li>
+                  <li>{1 + Math.pow(tan, 2)} = {1 / Math.pow(cos, 2)}</li>
                 </ul>
-              </span><br />
-              ※公式①、②の組み合わせで求まる公式<br />
+              </span>
+              ※公式①、②の組み合わせで求まる公式
               <details>
                   <summary>証明</summary>
                   <ul>
@@ -196,10 +198,35 @@ function Inner() {
                     </li>
                   </ul>
               </details>
-
-
             </dd>
-
+            <hr />
+            <dt>サインからコサイン、タンジェントを求める</dt>
+            <dd>
+              サインだけわかっている
+              <span>sin = {sin}</span>
+              公式②からコサインを求める
+              <ul>
+                <li>cos<sup>2</sup>θ + sin<sup>2</sup>θ = 1</li>
+                <li>cos<sup>2</sup>θ = 1 - sin<sup>2</sup>θ</li>
+              </ul>
+              <span>
+                <ul>
+                  <li>cos<sup>2</sup> = 1 - ({sin} ** 2)</li>
+                  <li>cos<sup>2</sup> = 1 - {(sin ** 2)}</li>
+                  <li>cos<sup>2</sup> = {1 - (sin ** 2)}</li>
+                  <li>cos = Math.sqrt({1 - (sin ** 2)})</li>
+                  <li>cos = {Math.sqrt(1 - (sin ** 2))}</li>
+                </ul>
+              </span>
+              公式①からタンジェントを求める<br />
+              tan θ = sin θ / cos θ
+              <span>
+                <ul>
+                  <li>tan = {sin} / {Math.sqrt(1 - (sin ** 2))} </li>
+                  <li>tan = {sin / Math.sqrt(1 - (sin ** 2))} </li>
+                </ul>
+              </span>
+            </dd>
           </dl>
         </Result>
     </>
