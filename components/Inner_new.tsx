@@ -211,19 +211,47 @@ function Inner() {
               </ul>
               <span>
                 <ul>
-                  <li>cos<sup>2</sup> = 1 - ({sin} ** 2)</li>
-                  <li>cos<sup>2</sup> = 1 - {(sin ** 2)}</li>
-                  <li>cos<sup>2</sup> = {1 - (sin ** 2)}</li>
-                  <li>cos = Math.sqrt({1 - (sin ** 2)})</li>
-                  <li>cos = {Math.sqrt(1 - (sin ** 2))}</li>
+                  <li>cos<sup>2</sup> = 1 - Math.pow({sin}, 2)</li>
+                  <li>cos<sup>2</sup> = 1 - {Math.pow(sin, 2)}</li>
+                  <li>cos<sup>2</sup> = {1 - Math.pow(sin, 2)}</li>
+                  <li>cos = Math.sqrt({1 - Math.pow(sin, 2)})</li>
+                  <li>cos = {Math.sqrt(1 - Math.pow(sin, 2))}</li>
                 </ul>
               </span>
               公式①からタンジェントを求める<br />
               tan θ = sin θ / cos θ
               <span>
                 <ul>
-                  <li>tan = {sin} / {Math.sqrt(1 - (sin ** 2))} </li>
-                  <li>tan = {sin / Math.sqrt(1 - (sin ** 2))} </li>
+                  <li>tan = {sin} / {Math.sqrt(1 - Math.pow(sin, 2))} </li>
+                  <li>tan = {sin / Math.sqrt(1 - Math.pow(sin, 2))} </li>
+                </ul>
+              </span>
+            </dd>
+            <hr />
+            <dt>コサインからサイン、タンジェントを求める</dt>
+            <dd>
+              コサインだけわかっている
+              <span>cos = {cos}</span>
+              公式②からサインを求める
+              <ul>
+                <li>cos<sup>2</sup>θ + sin<sup>2</sup>θ = 1</li>
+                <li>sin<sup>2</sup>θ = 1 - cos<sup>2</sup>θ</li>
+              </ul>
+              <span>
+                <ul>
+                  <li>sin<sup>2</sup> = 1 - Math.pow({cos}, 2)</li>
+                  <li>sin<sup>2</sup> = 1 - {Math.pow(cos, 2)}</li>
+                  <li>sin<sup>2</sup> = {1 - Math.pow(cos, 2)}</li>
+                  <li>sin = Math.sqrt({1 - Math.pow(cos, 2)})</li>
+                  <li>sin = {Math.sqrt(1 - Math.pow(cos, 2))}</li>
+                </ul>
+              </span>
+              公式①からタンジェントを求める<br />
+              tan θ = sin θ / cos θ
+              <span>
+                <ul>
+                  <li>tan = {Math.sqrt(1 - Math.pow(cos, 2))} / {cos} </li>
+                  <li>tan = {Math.sqrt(1 - Math.pow(cos, 2)) / cos} </li>
                 </ul>
               </span>
             </dd>
