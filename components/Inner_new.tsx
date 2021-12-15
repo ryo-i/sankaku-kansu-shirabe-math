@@ -255,6 +255,40 @@ function Inner() {
                 </ul>
               </span>
             </dd>
+            <hr />
+            <dt>タンジェントからサイン、コサインを求める</dt>
+            <dd>
+              タンジェントだけわかっている
+              <span>tan = {tan}</span>
+              公式③からコサインを求める
+              <ul>
+                <li>1 + tan<sup>2</sup>θ = 1 / cos<sup>2</sup>θ</li>
+                <li>1 / cos<sup>2</sup>θ = 1 + tan<sup>2</sup>θ</li>
+                <li>cos<sup>2</sup>θ = 1 / 1 + tan<sup>2</sup>θ</li>
+              </ul>
+              <span>
+                <ul>
+                  <li>cos<sup>2</sup> = 1 / 1 + Math.pow({tan}, 2)</li>
+                  <li>cos<sup>2</sup> = 1 / 1 + {Math.pow(tan, 2)}</li>
+                  <li>cos<sup>2</sup> = 1 / {1 + Math.pow(tan, 2)}</li>
+                  <li>cos = Math.sqrt(1) / Math.sqrt({1 + Math.pow(tan, 2)})</li>
+                  <li>cos = {Math.sqrt(1)} / {Math.sqrt(1 + Math.pow(tan, 2))}</li>
+                  <li>cos = {Math.sqrt(1) / Math.sqrt(1 + Math.pow(tan, 2))}</li>
+                </ul>
+              </span>
+              公式①からサインを求める<br />
+              <ul>
+                <li>tan θ = sin θ / cos θ</li>
+                <li>sin θ / cos θ = tan θ</li>
+                <li>sin θ = tan θ * cos θ</li>
+              </ul>
+              <span>
+                <ul>
+                  <li>sin = {tan} * {Math.sqrt(1) / Math.sqrt(1 + Math.pow(tan, 2))}</li>
+                  <li>sin = {tan * Math.sqrt(1) / Math.sqrt(1 + Math.pow(tan, 2))}</li>
+                </ul>
+              </span>
+            </dd>
           </dl>
         </Result>
     </>
