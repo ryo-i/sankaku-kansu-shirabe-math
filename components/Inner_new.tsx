@@ -120,7 +120,6 @@ function Inner() {
             </dd>
             <dt>ラジアン(rad)</dt>
             <dd>
-              <br />
               円周率(π)
               <span>Math.PI = {pi}</span>
               角度→ラジアン
@@ -130,7 +129,7 @@ function Inner() {
               →証明
               <ul>
                 <li>半径rと同じ長さの弧 = 1rad<br />
-                （通常は単位rは省略）</li>
+                （通常は単位radは省略する）</li>
                 <li>円周の長さ = 2πrなので<br />
                   360度のラジアン = 2π</li>
                 <li>2で割ると<br />
@@ -172,14 +171,21 @@ function Inner() {
             <dd>
               高さ(sin) / 底辺(cos) = タンジェント
               <span>{sin} / {cos} = {sin / cos}</span>
-              ※三角比の相互関係の公式①でもある
+              ※三角比の相互関係の公式①でもある<br />
+              tan θ = sin θ / cos θ
             </dd>
             <hr />
             <dt>三平方の定理</dt>
             <dd>
               底辺(cos)<sup>2</sup> + 高さ(sin)<sup>2</sup> = 斜辺(1)
-              <span>({cos} ** 2) + ({sin} ** 2) = {(cos ** 2) + (sin ** 2)}</span>
-              ※三角比の相互関係の公式②でもある
+              <span>
+                <ul>
+                  <li>(Math.pow({cos}, 2)) + (Math.pow({sin}, 2)) = {(Math.pow(cos, 2)) + (Math.pow(sin, 2))}</li>
+                  <li>{(Math.pow(cos, 2))} + {(Math.pow(sin, 2))} = {(Math.pow(cos, 2)) + (Math.pow(sin, 2))}</li>
+                </ul>
+              </span>
+              ※三角比の相互関係の公式②でもある<br />
+              sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1
             </dd>
             <hr />
             <dt>三角比の相互関係</dt>
@@ -220,7 +226,7 @@ function Inner() {
               <span>sin = {sin}</span>
               公式②からコサインを求める
               <ul>
-                <li>cos<sup>2</sup>θ + sin<sup>2</sup>θ = 1</li>
+                <li>sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1</li>
                 <li>cos<sup>2</sup>θ = 1 - sin<sup>2</sup>θ</li>
               </ul>
               <span>
@@ -248,7 +254,7 @@ function Inner() {
               <span>cos = {cos}</span>
               公式②からサインを求める
               <ul>
-                <li>cos<sup>2</sup>θ + sin<sup>2</sup>θ = 1</li>
+                <li>sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1</li>
                 <li>sin<sup>2</sup>θ = 1 - cos<sup>2</sup>θ</li>
               </ul>
               <span>

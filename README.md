@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- ラジアンの証明式を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 三平方の定理を二段階に、その他微修正 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 
