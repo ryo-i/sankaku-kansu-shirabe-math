@@ -49,7 +49,7 @@ const Result = styled.div`
 function Inner() {
   // Hooks
   const [angle, setAngle] = useState(30);
-  const [radian, setRadian] = useState(0);
+  const [rad, setRad] = useState(0);
   const [sin, setSin] = useState(0);
   const [cos, setCos] = useState(0);
   const [tan, setTan] = useState(0);
@@ -63,7 +63,7 @@ function Inner() {
   const angle2radian = (angle) => {
     let getRadian: number = angle * (pi / 180);
     // getRadian = Number(getRadian.toFixed(4));
-    setRadian(getRadian);
+    setRad(getRadian);
   };
 
   // 三角比
@@ -90,7 +90,7 @@ function Inner() {
   // 初期設定
   useEffect(() => {
     angle2radian(angle);
-    trigonometricRatio(radian);
+    trigonometricRatio(rad);
   });
 
 
@@ -123,9 +123,9 @@ function Inner() {
               円周率(π)
               <span>Math.PI = {pi}</span>
               角度→ラジアン
-              <span>θ * (Math.PI / 180) = {radian}</span>
+              <span>θ * (Math.PI / 180) = {rad}</span>
               ラジアン→角度<br/>
-              <span>rad / (Math.PI / 180) = {radian / (pi / 180)}</span>
+              <span>rad / (Math.PI / 180) = {rad / (pi / 180)}</span>
               →証明
               <ul>
                 <li>半径rと同じ長さの弧 = 1rad<br />
@@ -143,18 +143,33 @@ function Inner() {
             <hr />
             <dt>サイン(sin)</dt>
             <dd>
-              Y軸（単位円では高さ）
-              <span>Math.sin(rad) = {sin}</span>
+              Y座標（単位円では高さ）
+              <span>
+                <ul>
+                  <li>Math.sin(rad) = {sin}</li>
+                  <li>Math.sin({rad}) = {sin}</li>
+                </ul>
+              </span>
             </dd>
             <dt>コサイン(cos)</dt>
             <dd>
-              X軸（単位円では底辺）
-              <span>Math.cos(rad) = {cos}</span>
+              X座標（単位円では底辺）
+              <span>
+                <ul>
+                  <li>Math.cos(rad) = {cos}</li>
+                  <li>Math.cos({rad}) = {cos}</li>
+                </ul>
+              </span>
             </dd>
             <dt>タンジェント(tan)</dt>
             <dd>
-              X軸とY軸の傾き
-              <span>Math.tan(rad) = {tan}</span>
+              X座標とY座標の傾き
+              <span>
+                <ul>
+                  <li>Math.tan(rad) = {tan}</li>
+                  <li>Math.tan(rad) = {tan}</li>
+                </ul>
+              </span>
             </dd>
             <hr />
             <dt>三角比(サイン)</dt>
@@ -306,6 +321,48 @@ function Inner() {
                 <ul>
                   <li>sin = {tan} * {Math.sqrt(1) / Math.sqrt(1 + Math.pow(tan, 2))}</li>
                   <li>sin = {tan * Math.sqrt(1) / Math.sqrt(1 + Math.pow(tan, 2))}</li>
+                </ul>
+              </span>
+            </dd>
+            <hr />
+            <dt>逆三角関数(アークサイン)</dt>
+            <dd>
+              サインからラジアンを算出する逆関数
+               <span>
+                <ul>
+                  <li>Math.asin(sin) = {Math.asin(sin)}</li>
+                  <li>Math.asin({sin}) = {Math.asin(sin)}</li>
+                </ul>
+              </span>
+            </dd>
+            <dt>逆三角関数(アークコサイン)</dt>
+            コサインからラジアンを算出する逆関数
+            <dd>
+              <span>
+                <ul>
+                  <li>Math.acos(cos) = {Math.acos(cos)}</li>
+                  <li>Math.acos({cos}) = {Math.acos(cos)}</li>
+                </ul>
+              </span>
+            </dd>
+            <dt>逆三角関数(アークタンジェント)</dt>
+            タンジェントからラジアンを算出する逆関数
+            <dd>
+              <span>
+                <ul>
+                  <li>Math.atan(tan) = {Math.atan(tan)}</li>
+                  <li>Math.atan({tan}) = {Math.atan(tan)}</li>
+                </ul>
+              </span>
+            </dd>
+            <dt>逆三角関数(アークタンジェント2)</dt>
+            <dd>
+              引数がY座標, X座標の2つ<br />
+              単位円ではY座標 = sin, x座標 = cos
+              <span>
+                <ul>
+                  <li>Math.atan2(sin, cos) = {Math.atan2(sin, cos)}</li>
+                  <li>Math.atan2({sin}, {cos}) = {Math.atan2(sin, cos)}</li>
                 </ul>
               </span>
             </dd>
