@@ -99,7 +99,7 @@ function Inner() {
     <>
         <UnitCircle>
           <dl>
-            <dt>単位円(半径=1)</dt>
+            <dt>単位円(半径r=1)</dt>
           </dl>
           <dd>
             <ReactP5Wrapper
@@ -114,16 +114,32 @@ function Inner() {
             <dd><input type="number" value={angle} min="-360" max="360" onChange={changeAngle} />度（-360度〜360度）
             <input type="range" name="hue" value={angle} min="-360" max="360" onChange={changeAngle} /></dd>
             <hr />
-            <dt>円周率(π)</dt>
+            <dt></dt>
             <dd>
-              <span>Math.PI = {pi}</span>
+
             </dd>
             <dt>ラジアン(rad)</dt>
             <dd>
+              <br />
+              円周率(π)
+              <span>Math.PI = {pi}</span>
               角度→ラジアン
               <span>θ * (Math.PI / 180) = {radian}</span>
               ラジアン→角度<br/>
               <span>rad / (Math.PI / 180) = {radian / (pi / 180)}</span>
+              →証明
+              <ul>
+                <li>半径rと同じ長さの弧 = 1rad<br />
+                （通常は単位rは省略）</li>
+                <li>円周の長さ = 2πrなので<br />
+                  360度のラジアン = 2π</li>
+                <li>2で割ると<br />
+                  半円180度のラジアン = π</li>
+                <li>さらに180で割ると<br />
+                  1度あたりのラジアン = π / 180</li>
+                <li>ここに角度θをかける<br />
+                角度θあたりのラジアン = θ * (Math.PI / 180)</li>
+              </ul>
             </dd>
             <hr />
             <dt>サイン(sin)</dt>
@@ -177,27 +193,25 @@ function Inner() {
                   <li>{1 + Math.pow(tan, 2)} = {1 / Math.pow(cos, 2)}</li>
                 </ul>
               </span>
-              ※公式①、②の組み合わせで求まる公式
-              <details>
-                  <summary>証明</summary>
-                  <ul>
-                    <li>
-                      公式②より<br />
-                      sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1
-                    </li>
-                    <li>
-                      両辺をcos<sup>2</sup>θで割る<br />
-                      (sin<sup>2</sup>θ / cos<sup>2</sup>θ) + (cos<sup>2</sup>θ / cos<sup>2</sup>θ) = 1 / cos<sup>2</sup>θ
-                    </li>
-                    <li>約分すると<br />
-                      (sin θ / cos θ)<sup>2</sup> + 1 = 1 / cos<sup>2</sup>θ
-                    </li>
-                    <li>
-                      公式①よりタンジェントを代入<br />
-                      tan<sup>2</sup>θ + 1 = 1 / cos<sup>2</sup>θ
-                    </li>
-                  </ul>
-              </details>
+              公式①、②の組み合わせで求まる公式<br />
+              →証明
+              <ul>
+                <li>
+                  公式②より<br />
+                  sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1
+                </li>
+                <li>
+                  両辺をcos<sup>2</sup>θで割る<br />
+                  (sin<sup>2</sup>θ / cos<sup>2</sup>θ) + (cos<sup>2</sup>θ / cos<sup>2</sup>θ) = 1 / cos<sup>2</sup>θ
+                </li>
+                <li>約分すると<br />
+                  (sin θ / cos θ)<sup>2</sup> + 1 = 1 / cos<sup>2</sup>θ
+                </li>
+                <li>
+                  公式①よりタンジェントを代入<br />
+                  tan<sup>2</sup>θ + 1 = 1 / cos<sup>2</sup>θ
+                </li>
+              </ul>
             </dd>
             <hr />
             <dt>サインからコサイン、タンジェントを求める</dt>
