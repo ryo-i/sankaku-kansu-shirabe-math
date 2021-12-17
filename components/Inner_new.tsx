@@ -151,11 +151,12 @@ function Inner() {
             <TabPanel>
               <dt>ラジアン(rad)</dt>
               <dd>
+                三角関数の角度は度数法ではなく弧度法（ラジアン）を用いる<br />
                 円周率(π)
                 <span>Math.PI = {pi}</span>
-                角度→ラジアン
+                度数→ラジアン
                 <span>θ * (Math.PI / 180) = {rad}</span>
-                ラジアン→角度<br/>
+                ラジアン→度数<br/>
                 <span>rad / (Math.PI / 180) = {rad / (pi / 180)}</span>
                 →証明
                 <ul>
