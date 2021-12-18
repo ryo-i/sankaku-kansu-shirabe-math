@@ -33,7 +33,6 @@ const Result = styled.div`
   }
   dd {
     font-size: 12px;
-
     span {
       background: #eee;
       padding: 5px;
@@ -44,8 +43,13 @@ const Result = styled.div`
       }
     }
   }
+  menu {
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
   .react-tabs__tab-list {
-    margin: 0 0 5px;
+    margin: 0;
     border: none;
     font-size: 12px;
     .react-tabs__tab {
@@ -135,19 +139,19 @@ function Inner() {
               <input type="number" value={angle} min="-360" max="360" onChange={changeAngle} />度（-360度〜360度）
               <input type="range" name="hue" value={angle} min="-360" max="360" onChange={changeAngle} />
             </dd>
-            <hr />
-            <TabList>
-              <Tab>ラジアン</Tab>
-              <Tab>sin,cos,tan</Tab>
-              <Tab>三角比</Tab>
-              <Tab>三平方の定理</Tab>
-              <Tab>三角比の相互関係</Tab>
-              <Tab>sin → cos, tan</Tab>
-              <Tab>cos → sin, tan</Tab>
-              <Tab>tan → sin, cos</Tab>
-              <Tab>逆三角関数</Tab>
-            </TabList>
-            <hr />
+            <menu>
+              <TabList>
+                <Tab>ラジアン</Tab>
+                <Tab>sin,cos,tan</Tab>
+                <Tab>三角比</Tab>
+                <Tab>三平方の定理</Tab>
+                <Tab>三角比の相互関係</Tab>
+                <Tab>sin → cos, tan</Tab>
+                <Tab>cos → sin, tan</Tab>
+                <Tab>tan → sin, cos</Tab>
+                <Tab>逆三角関数</Tab>
+              </TabList>
+            </menu>
             <TabPanel>
               <dt>ラジアン(rad)</dt>
               <dd>
@@ -220,22 +224,47 @@ function Inner() {
               <dd>
                 高さ(sin) / 底辺(cos) = タンジェント
                 <span>{sin} / {cos} = {sin / cos}</span>
-                ※三角比の相互関係の公式①でもある<br />
+                →三角比の相互関係の公式①でもある<br />
                 tan θ = sin θ / cos θ
               </dd>
               </TabPanel>
               <TabPanel>
               <dt>三平方の定理</dt>
               <dd>
-                底辺(cos)<sup>2</sup> + 高さ(sin)<sup>2</sup> = 斜辺(1)
+                底辺(cos)<sup>2</sup> + 高さ(sin)<sup>2</sup> = 斜辺(1)<sup>2</sup>
                 <span>
                   <ul>
                     <li>(Math.pow({cos}, 2)) + (Math.pow({sin}, 2)) = {(Math.pow(cos, 2)) + (Math.pow(sin, 2))}</li>
                     <li>{(Math.pow(cos, 2))} + {(Math.pow(sin, 2))} = {(Math.pow(cos, 2)) + (Math.pow(sin, 2))}</li>
                   </ul>
                 </span>
-                ※三角比の相互関係の公式②でもある<br />
-                sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1
+                →三角比の相互関係の公式②でもある<br />
+                sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1<br />
+                <details>
+                  <summary>証明（正方形を用いた証明）</summary>
+                  <ul>
+                    <li>
+                      一辺 = 底辺 + 高さの大正方形の中に<br />
+                      一辺 = 斜辺の小正方形がある
+                    </li>
+                    <li>
+                      大正方形の面積は以下の2つといえる<br />
+                      大正方形の面積 = (底辺 + 高さ)<sup>2</sup><br />
+                      大正方形の面積 = 三角形4つの面積 + 小正方形の面積
+                    </li>
+                    <li>
+                      三角形4つの面積 = (底辺 * 高さ / 2) * 4<br />
+                      三角形4つの面積 = 2 * 底辺 * 高さ
+                    </li>
+                    <li>小正方形の面積 = 斜辺<sup>2</sup></li>
+                    <li>
+                      代入すると<br />
+                      (底辺 + 高さ)<sup>2</sup> = (2 * 底辺 * 高さ) + 斜辺<sup>2</sup><br />
+                      底辺<sup>2</sup> + (2 * 底辺 * 高さ) + 高さ<sup>2</sup> = (2 * 底辺 * 高さ) + 斜辺<sup>2</sup><br />
+                      底辺<sup>2</sup> + 高さ<sup>2</sup> = 斜辺<sup>2</sup>
+                    </li>
+                  </ul>
+                </details>
               </dd>
               </TabPanel>
               <TabPanel>
@@ -251,24 +280,27 @@ function Inner() {
                   </ul>
                 </span>
                 公式①、②の組み合わせで求まる公式<br />
-                →証明
-                <ul>
-                  <li>
-                    公式②より<br />
-                    sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1
-                  </li>
-                  <li>
-                    両辺をcos<sup>2</sup>θで割る<br />
-                    (sin<sup>2</sup>θ / cos<sup>2</sup>θ) + (cos<sup>2</sup>θ / cos<sup>2</sup>θ) = 1 / cos<sup>2</sup>θ
-                  </li>
-                  <li>約分すると<br />
-                    (sin θ / cos θ)<sup>2</sup> + 1 = 1 / cos<sup>2</sup>θ
-                  </li>
-                  <li>
-                    公式①よりタンジェントを代入<br />
-                    tan<sup>2</sup>θ + 1 = 1 / cos<sup>2</sup>θ
-                  </li>
-                </ul>
+                <details>
+                <summary>証明</summary>
+                  <ul>
+                    <li>
+                      公式②より<br />
+                      sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1
+                    </li>
+                    <li>
+                      両辺をcos<sup>2</sup>θで割る<br />
+                      (sin<sup>2</sup>θ / cos<sup>2</sup>θ) + (cos<sup>2</sup>θ / cos<sup>2</sup>θ) = 1 / cos<sup>2</sup>θ
+                    </li>
+                    <li>約分すると<br />
+                      (sin θ / cos θ)<sup>2</sup> + 1 = 1 / cos<sup>2</sup>θ
+                    </li>
+                    <li>
+                      公式①よりタンジェントを代入<br />
+                      tan<sup>2</sup>θ + 1 = 1 / cos<sup>2</sup>θ
+                    </li>
+                  </ul>
+                </details>
+
               </dd>
               </TabPanel>
               <TabPanel>

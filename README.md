@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- ラジアンの語句を追加, 修正 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 三平方の定理に追記、修正 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 ## 詳細（ブログ）
