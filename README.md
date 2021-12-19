@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 三角比あたりの語句を整理 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 双極線関数を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 ## 詳細（ブログ）

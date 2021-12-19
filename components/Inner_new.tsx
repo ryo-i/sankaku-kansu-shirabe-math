@@ -150,6 +150,7 @@ function Inner() {
                 <Tab>cos → sin, tan</Tab>
                 <Tab>tan → sin, cos</Tab>
                 <Tab>逆三角関数</Tab>
+                <Tab>双曲線関数</Tab>
               </TabList>
             </menu>
             <TabPanel>
@@ -178,13 +179,13 @@ function Inner() {
                   </ul>
                 </details>
               </dd>
-              </TabPanel>
-              <TabPanel>
-              <dt>三角比の関数</dt>
+            </TabPanel>
+            <TabPanel>
+              <dt>三角比のJS関数</dt>
               <dd>
                 ラジアンから三角比を算出するJSの関数
               </dd>
-              <dt>サイン(sin)</dt>
+              <dt>サイン(sin())</dt>
               <dd>
                 Y座標（単位円での高さ）
                 <span>
@@ -194,7 +195,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>コサイン(cos)</dt>
+              <dt>コサイン(cos())</dt>
               <dd>
                 X座標（単位円での底辺）
                 <span>
@@ -204,7 +205,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>タンジェント(tan)</dt>
+              <dt>タンジェント(tan())</dt>
               <dd>
                 X座標とY座標の傾き
                 <span>
@@ -214,8 +215,8 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              </TabPanel>
-              <TabPanel>
+            </TabPanel>
+            <TabPanel>
               <dt>三角比の計算</dt>
               <dd>
                 三角比 = 直角三角形の2辺の長さの比率
@@ -237,8 +238,8 @@ function Inner() {
                 →三角比の相互関係の公式①でもある<br />
                 tan θ = sin θ / cos θ
               </dd>
-              </TabPanel>
-              <TabPanel>
+            </TabPanel>
+            <TabPanel>
               <dt>三平方の定理</dt>
               <dd>
                 直角三角形の3辺の長さは下記の関係になる<br />
@@ -277,8 +278,8 @@ function Inner() {
                   </ul>
                 </details>
               </dd>
-              </TabPanel>
-              <TabPanel>
+            </TabPanel>
+            <TabPanel>
               <dt>三角比の相互関係</dt>
               <dd>
                 三角比の相互関係の公式③<br />
@@ -311,10 +312,9 @@ function Inner() {
                     </li>
                   </ul>
                 </details>
-
               </dd>
-              </TabPanel>
-              <TabPanel>
+            </TabPanel>
+            <TabPanel>
               <dt>サインからコサイン、タンジェントを求める</dt>
               <dd>
                 サインだけわかっている場合
@@ -342,8 +342,8 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              </TabPanel>
-              <TabPanel>
+            </TabPanel>
+            <TabPanel>
               <dt>コサインからサイン、タンジェントを求める</dt>
               <dd>
                 コサインだけわかっている場合
@@ -371,8 +371,8 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              </TabPanel>
-              <TabPanel>
+            </TabPanel>
+            <TabPanel>
               <dt>タンジェントからサイン、コサインを求める</dt>
               <dd>
                 タンジェントだけわかっている場合
@@ -406,11 +406,11 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              </TabPanel>
-              <TabPanel>
+            </TabPanel>
+            <TabPanel>
               <dt>逆三角関数のJS関数</dt>
               <dd>三角比からラジアンを算出するJS関数</dd>
-              <dt>アークサイン(asin)</dt>
+              <dt>アークサイン(asin())</dt>
               <dd>
                 サインからラジアンを算出する逆関数
                 <span>
@@ -420,7 +420,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>アークコサイン(acos)</dt>
+              <dt>アークコサイン(acos())</dt>
               コサインからラジアンを算出する逆関数
               <dd>
                 <span>
@@ -430,7 +430,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>アークタンジェント(atan)</dt>
+              <dt>アークタンジェント(atan())</dt>
               タンジェントからラジアンを算出する逆関数
               <dd>
                 <span>
@@ -440,14 +440,72 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>アークタンジェント2(atan2)</dt>
+              <dt>アークタンジェント2(atan2())</dt>
               <dd>
-                引数がY座標, X座標の2つ<br />
+                atan2()はY座標, X座標からラジアンを算出できる<br />
                 単位円ではY座標 = sin, x座標 = cos
                 <span>
                   <ul>
                     <li>Math.atan2(sin, cos) = {Math.atan2(sin, cos)}</li>
                     <li>Math.atan2({sin}, {cos}) = {Math.atan2(sin, cos)}</li>
+                  </ul>
+                </span>
+              </dd>
+            </TabPanel>
+            <TabPanel>
+              <dt>双曲線関数のJS関数</dt>
+              <dd>三角比から双曲線関数を算出するJS関数</dd>
+              <dt>ハイパーボリックサイン(sinh())</dt>
+              <dd>
+                <span>
+                  <ul>
+                    <li>Math.sinh(sin) = {Math.sinh(sin)}</li>
+                    <li>Math.sinh({sin}) = {Math.sinh(sin)}</li>
+                  </ul>
+                </span>
+              </dd>
+              <dt>ハイパーボリックコサイン(cosh())</dt>
+              <dd>
+                <span>
+                  <ul>
+                    <li>Math.cosh(cos) = {Math.cosh(cos)}</li>
+                    <li>Math.cosh({cos}) = {Math.cosh(cos)}</li>
+                  </ul>
+                </span>
+              </dd>
+              <dt>ハイパーボリックタンジェント(tanh())</dt>
+              <dd>
+                <span>
+                  <ul>
+                    <li>Math.tanh(tan) = {Math.tanh(tan)}</li>
+                    <li>Math.tanh({tan}) = {Math.tanh(tan)}</li>
+                  </ul>
+                </span>
+              </dd>
+              <dt>ハイパーボリックアークサイン(asinh())</dt>
+              <dd>
+                <span>
+                  <ul>
+                    <li>Math.asinh(sin) = {Math.asinh(sin)}</li>
+                    <li>Math.asinh({sin}) = {Math.asinh(sin)}</li>
+                  </ul>
+                </span>
+              </dd>
+              <dt>ハイパーボリックアークコサイン(acosh())</dt>
+              <dd>
+                <span>
+                  <ul>
+                    <li>Math.acosh(cos) = {Math.acosh(cos)}</li>
+                    <li>Math.acosh({cos}) = {Math.acosh(cos)}</li>
+                  </ul>
+                </span>
+              </dd>
+              <dt>ハイパーボリックアークタンジェント(atanh())</dt>
+              <dd>
+                <span>
+                  <ul>
+                    <li>Math.atanh(tan) = {Math.atanh(tan)}</li>
+                    <li>Math.atanh({tan}) = {Math.atanh(tan)}</li>
                   </ul>
                 </span>
               </dd>
