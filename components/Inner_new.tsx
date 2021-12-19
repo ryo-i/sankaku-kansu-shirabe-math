@@ -142,8 +142,8 @@ function Inner() {
             <menu>
               <TabList>
                 <Tab>ラジアン</Tab>
-                <Tab>sin,cos,tan</Tab>
-                <Tab>三角比</Tab>
+                <Tab>三角比の関数</Tab>
+                <Tab>三角比の計算</Tab>
                 <Tab>三平方の定理</Tab>
                 <Tab>三角比の相互関係</Tab>
                 <Tab>sin → cos, tan</Tab>
@@ -162,25 +162,31 @@ function Inner() {
                 <span>θ * (Math.PI / 180) = {rad}</span>
                 ラジアン→度数<br/>
                 <span>rad / (Math.PI / 180) = {rad / (pi / 180)}</span>
-                →証明
-                <ul>
-                  <li>半径rと同じ長さの弧 = 1rad<br />
-                  （通常は単位radは省略する）</li>
-                  <li>円周の長さ = 2πrなので<br />
-                    360度のラジアン = 2π</li>
-                  <li>2で割ると<br />
-                    半円180度のラジアン = π</li>
-                  <li>さらに180で割ると<br />
-                    1度あたりのラジアン = π / 180</li>
-                  <li>ここに角度θをかける<br />
-                  角度θあたりのラジアン = θ * (Math.PI / 180)</li>
-                </ul>
+                <details>
+                  <summary>証明</summary>
+                  <ul>
+                    <li>半径rと同じ長さの弧 = 1rad<br />
+                    （通常は単位radは省略する）</li>
+                    <li>円周の長さ = 2πrなので<br />
+                      360度のラジアン = 2π</li>
+                    <li>2で割ると<br />
+                      半円180度のラジアン = π</li>
+                    <li>さらに180で割ると<br />
+                      1度あたりのラジアン = π / 180</li>
+                    <li>ここに角度θをかける<br />
+                    角度θあたりのラジアン = θ * (Math.PI / 180)</li>
+                  </ul>
+                </details>
               </dd>
               </TabPanel>
               <TabPanel>
+              <dt>三角比の関数</dt>
+              <dd>
+                ラジアンから三角比を算出するJSの関数
+              </dd>
               <dt>サイン(sin)</dt>
               <dd>
-                Y座標（単位円では高さ）
+                Y座標（単位円での高さ）
                 <span>
                   <ul>
                     <li>Math.sin(rad) = {sin}</li>
@@ -190,7 +196,7 @@ function Inner() {
               </dd>
               <dt>コサイン(cos)</dt>
               <dd>
-                X座標（単位円では底辺）
+                X座標（単位円での底辺）
                 <span>
                   <ul>
                     <li>Math.cos(rad) = {cos}</li>
@@ -204,25 +210,29 @@ function Inner() {
                 <span>
                   <ul>
                     <li>Math.tan(rad) = {tan}</li>
-                    <li>Math.tan(rad) = {tan}</li>
+                    <li>Math.tan({rad}) = {tan}</li>
                   </ul>
                 </span>
               </dd>
               </TabPanel>
               <TabPanel>
-              <dt>三角比(サイン)</dt>
+              <dt>三角比の計算</dt>
+              <dd>
+                三角比 = 直角三角形の2辺の長さの比率
+              </dd>
+              <dt>サインの計算</dt>
               <dd>
                 高さ(sin) / 斜辺(1) = サイン
                 <span>{sin} / 1  = {sin / 1}</span>
               </dd>
-              <dt>三角比(コサイン)</dt>
+              <dt>コサインの計算</dt>
               <dd>
-                底辺(cos) / 斜辺(1) = コサイン
+                →底辺(cos) / 斜辺(1) = コサイン
                 <span>{cos} / 1 = {cos / 1}</span>
               </dd>
-              <dt>三角比(タンジェント)</dt>
+              <dt>タンジェントの計算</dt>
               <dd>
-                高さ(sin) / 底辺(cos) = タンジェント
+                →高さ(sin) / 底辺(cos) = タンジェント
                 <span>{sin} / {cos} = {sin / cos}</span>
                 →三角比の相互関係の公式①でもある<br />
                 tan θ = sin θ / cos θ
@@ -231,6 +241,7 @@ function Inner() {
               <TabPanel>
               <dt>三平方の定理</dt>
               <dd>
+                直角三角形の3辺の長さは下記の関係になる<br />
                 底辺(cos)<sup>2</sup> + 高さ(sin)<sup>2</sup> = 斜辺(1)<sup>2</sup>
                 <span>
                   <ul>
@@ -306,7 +317,7 @@ function Inner() {
               <TabPanel>
               <dt>サインからコサイン、タンジェントを求める</dt>
               <dd>
-                サインだけわかっている
+                サインだけわかっている場合
                 <span>sin = {sin}</span>
                 公式②からコサインを求める
                 <ul>
@@ -335,7 +346,7 @@ function Inner() {
               <TabPanel>
               <dt>コサインからサイン、タンジェントを求める</dt>
               <dd>
-                コサインだけわかっている
+                コサインだけわかっている場合
                 <span>cos = {cos}</span>
                 公式②からサインを求める
                 <ul>
@@ -364,7 +375,7 @@ function Inner() {
               <TabPanel>
               <dt>タンジェントからサイン、コサインを求める</dt>
               <dd>
-                タンジェントだけわかっている
+                タンジェントだけわかっている場合
                 <span>tan = {tan}</span>
                 公式③からコサインを求める
                 <ul>
@@ -397,7 +408,9 @@ function Inner() {
               </dd>
               </TabPanel>
               <TabPanel>
-              <dt>逆三角関数(アークサイン)</dt>
+              <dt>逆三角関数のJS関数</dt>
+              <dd>三角比からラジアンを算出するJS関数</dd>
+              <dt>アークサイン(asin)</dt>
               <dd>
                 サインからラジアンを算出する逆関数
                 <span>
@@ -407,7 +420,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>逆三角関数(アークコサイン)</dt>
+              <dt>アークコサイン(acos)</dt>
               コサインからラジアンを算出する逆関数
               <dd>
                 <span>
@@ -417,7 +430,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>逆三角関数(アークタンジェント)</dt>
+              <dt>アークタンジェント(atan)</dt>
               タンジェントからラジアンを算出する逆関数
               <dd>
                 <span>
@@ -427,7 +440,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>逆三角関数(アークタンジェント2)</dt>
+              <dt>アークタンジェント2(atan2)</dt>
               <dd>
                 引数がY座標, X座標の2つ<br />
                 単位円ではY座標 = sin, x座標 = cos
