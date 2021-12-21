@@ -110,7 +110,7 @@ function Inner() {
   };
 
 
-  // コサインチェック
+  // cosのプラマイチェック
   const checkCos = ():number => {
     let cos:number;
     if ((90 < angle && angle < 270) || (-270 < angle && angle < -90)) {
@@ -122,16 +122,16 @@ function Inner() {
   };
 
 
-    // サインチェック
-    const checkSin = ():number => {
-      let sin:number;
-      if ((180 < angle && angle < 360) || (-180 < angle && angle < 0)) {
-        sin = -(Math.sqrt(1 - Math.pow(cos, 2)));
-      } else {
-        sin = Math.sqrt(1 - Math.pow(cos, 2));
-      }
-      return sin;
-    };
+  // sinのプラマイチェック
+  const checkSin = ():number => {
+    let sin:number;
+    if ((180 < angle && angle < 360) || (-180 < angle && angle < 0)) {
+      sin = -(Math.sqrt(1 - Math.pow(cos, 2)));
+    } else {
+      sin = Math.sqrt(1 - Math.pow(cos, 2));
+    }
+    return sin;
+  };
 
 
   // 初期設定
@@ -449,7 +449,19 @@ function Inner() {
             </TabPanel>
             <TabPanel>
               <dt>逆三角関数のJS関数</dt>
-              <dd>三角比からラジアンを算出するJS関数</dd>
+              <dd>三角比からラジアンを算出するJS関数<br />
+              (逆三角形は90度まではすべて同じ結果になるが、それ以外の角度はatan2()の0〜180度、-180度〜0度が一致する)</dd>
+              <dt>アークタンジェント2(atan2())</dt>
+              <dd>
+                Y座標, X座標からラジアンを算出できる<br />
+                単位円ではY座標 = sin, x座標 = cos
+                <span>
+                  <ul>
+                    <li>Math.atan2(sin, cos) = {Math.atan2(sin, cos)}</li>
+                    <li>Math.atan2({sin}, {cos}) = {Math.atan2(sin, cos)}</li>
+                  </ul>
+                </span>
+              </dd>
               <dt>アークサイン(asin())</dt>
               <dd>
                 サインからラジアンを算出する逆関数
@@ -461,8 +473,8 @@ function Inner() {
                 </span>
               </dd>
               <dt>アークコサイン(acos())</dt>
-              コサインからラジアンを算出する逆関数
               <dd>
+                コサインからラジアンを算出する逆関数
                 <span>
                   <ul>
                     <li>Math.acos(cos) = {Math.acos(cos)}</li>
@@ -471,23 +483,12 @@ function Inner() {
                 </span>
               </dd>
               <dt>アークタンジェント(atan())</dt>
-              タンジェントからラジアンを算出する逆関数
               <dd>
+                タンジェントからラジアンを算出する逆関数
                 <span>
                   <ul>
                     <li>Math.atan(tan) = {Math.atan(tan)}</li>
                     <li>Math.atan({tan}) = {Math.atan(tan)}</li>
-                  </ul>
-                </span>
-              </dd>
-              <dt>アークタンジェント2(atan2())</dt>
-              <dd>
-                atan2()はY座標, X座標からラジアンを算出できる<br />
-                単位円ではY座標 = sin, x座標 = cos
-                <span>
-                  <ul>
-                    <li>Math.atan2(sin, cos) = {Math.atan2(sin, cos)}</li>
-                    <li>Math.atan2({sin}, {cos}) = {Math.atan2(sin, cos)}</li>
                   </ul>
                 </span>
               </dd>

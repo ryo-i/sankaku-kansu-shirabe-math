@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 三角比の相互関係にプラマイチェック処理を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 逆三角関数のatan2()を上に、座標の範囲を追記 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 ## 詳細（ブログ）
