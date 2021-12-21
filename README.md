@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- ラジアンの代入式を追記 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- 三角比の相互関係にプラマイチェック処理を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 ## 詳細（ブログ）

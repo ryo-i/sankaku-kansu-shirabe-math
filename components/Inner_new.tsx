@@ -110,6 +110,30 @@ function Inner() {
   };
 
 
+  // コサインチェック
+  const checkCos = ():number => {
+    let cos:number;
+    if ((90 < angle && angle < 270) || (-270 < angle && angle < -90)) {
+      cos = -(Math.sqrt(1 - Math.pow(sin, 2)));
+    } else {
+      cos = Math.sqrt(1 - Math.pow(sin, 2));
+    }
+    return cos;
+  };
+
+
+    // サインチェック
+    const checkSin = ():number => {
+      let sin:number;
+      if ((180 < angle && angle < 360) || (-180 < angle && angle < 0)) {
+        sin = -(Math.sqrt(1 - Math.pow(cos, 2)));
+      } else {
+        sin = Math.sqrt(1 - Math.pow(cos, 2));
+      }
+      return sin;
+    };
+
+
   // 初期設定
   useEffect(() => {
     angle2radian(angle);
@@ -172,7 +196,6 @@ function Inner() {
                     <li>rad / (Math.PI / 180) = {rad / (pi / 180)}</li>
                     <li>{rad} / (Math.PI / 180) = {rad / (pi / 180)}</li>
                   </ul>
-
                 </span>
                 <details>
                   <summary>証明</summary>
@@ -342,14 +365,16 @@ function Inner() {
                     <li>cos<sup>2</sup> = {1 - Math.pow(sin, 2)}</li>
                     <li>cos = Math.sqrt({1 - Math.pow(sin, 2)})</li>
                     <li>cos = {Math.sqrt(1 - Math.pow(sin, 2))}</li>
+                    <li>角度が90度〜270度(-270度〜-90度)の場合はマイナス<br />
+                    cos = {checkCos()} ({angle}度)</li>
                   </ul>
                 </span>
                 公式①からタンジェントを求める<br />
                 tan θ = sin θ / cos θ
                 <span>
                   <ul>
-                    <li>tan = {sin} / {Math.sqrt(1 - Math.pow(sin, 2))} </li>
-                    <li>tan = {sin / Math.sqrt(1 - Math.pow(sin, 2))} </li>
+                    <li>tan = {sin} / {checkCos()} </li>
+                    <li>tan = {sin / checkCos()} </li>
                   </ul>
                 </span>
               </dd>
@@ -371,14 +396,16 @@ function Inner() {
                     <li>sin<sup>2</sup> = {1 - Math.pow(cos, 2)}</li>
                     <li>sin = Math.sqrt({1 - Math.pow(cos, 2)})</li>
                     <li>sin = {Math.sqrt(1 - Math.pow(cos, 2))}</li>
+                    <li>角度が180度〜360度(0度〜-180度)の場合はマイナス<br />
+                    sin = {checkSin()} ({angle}度)</li>
                   </ul>
                 </span>
                 公式①からタンジェントを求める<br />
                 tan θ = sin θ / cos θ
                 <span>
                   <ul>
-                    <li>tan = {Math.sqrt(1 - Math.pow(cos, 2))} / {cos} </li>
-                    <li>tan = {Math.sqrt(1 - Math.pow(cos, 2)) / cos} </li>
+                    <li>tan = {checkSin()} / {cos} </li>
+                    <li>tan = {checkSin() / cos} </li>
                   </ul>
                 </span>
               </dd>
@@ -402,6 +429,8 @@ function Inner() {
                     <li>cos = Math.sqrt(1) / Math.sqrt({1 + Math.pow(tan, 2)})</li>
                     <li>cos = {Math.sqrt(1)} / {Math.sqrt(1 + Math.pow(tan, 2))}</li>
                     <li>cos = {Math.sqrt(1) / Math.sqrt(1 + Math.pow(tan, 2))}</li>
+                    <li>角度が90度〜270度(-270度〜-90度)の場合はマイナス<br />
+                    cos = {checkCos()} ({angle}度)</li>
                   </ul>
                 </span>
                 公式①からサインを求める<br />
@@ -412,8 +441,8 @@ function Inner() {
                 </ul>
                 <span>
                   <ul>
-                    <li>sin = {tan} * {Math.sqrt(1) / Math.sqrt(1 + Math.pow(tan, 2))}</li>
-                    <li>sin = {tan * Math.sqrt(1) / Math.sqrt(1 + Math.pow(tan, 2))}</li>
+                    <li>sin = {tan} * {checkCos()}</li>
+                    <li>sin = {tan * checkCos()}</li>
                   </ul>
                 </span>
               </dd>
