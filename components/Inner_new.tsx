@@ -143,7 +143,7 @@ function Inner() {
               <TabList>
                 <Tab>ラジアン</Tab>
                 <Tab>三角比の関数</Tab>
-                <Tab>三角比の計算</Tab>
+                <Tab>三角比の算出</Tab>
                 <Tab>三平方の定理</Tab>
                 <Tab>三角比の相互関係</Tab>
                 <Tab>sin → cos, tan</Tab>
@@ -160,9 +160,20 @@ function Inner() {
                 円周率(π)
                 <span>Math.PI = {pi}</span>
                 度数→ラジアン
-                <span>θ * (Math.PI / 180) = {rad}</span>
+                <span>
+                  <ul>
+                    <li>θ * (Math.PI / 180) = {rad}</li>
+                    <li>{angle} * (Math.PI / 180) = {rad}</li>
+                  </ul>
+                </span>
                 ラジアン→度数<br/>
-                <span>rad / (Math.PI / 180) = {rad / (pi / 180)}</span>
+                <span>
+                  <ul>
+                    <li>rad / (Math.PI / 180) = {rad / (pi / 180)}</li>
+                    <li>{rad} / (Math.PI / 180) = {rad / (pi / 180)}</li>
+                  </ul>
+
+                </span>
                 <details>
                   <summary>証明</summary>
                   <ul>
@@ -217,21 +228,21 @@ function Inner() {
               </dd>
             </TabPanel>
             <TabPanel>
-              <dt>三角比の計算</dt>
+              <dt>三角比の算出</dt>
               <dd>
                 三角比 = 直角三角形の2辺の長さの比率
               </dd>
-              <dt>サインの計算</dt>
+              <dt>サインの算出</dt>
               <dd>
                 高さ(sin) / 斜辺(1) = サイン
                 <span>{sin} / 1  = {sin / 1}</span>
               </dd>
-              <dt>コサインの計算</dt>
+              <dt>コサインの算出</dt>
               <dd>
                 →底辺(cos) / 斜辺(1) = コサイン
                 <span>{cos} / 1 = {cos / 1}</span>
               </dd>
-              <dt>タンジェントの計算</dt>
+              <dt>タンジェントの算出</dt>
               <dd>
                 →高さ(sin) / 底辺(cos) = タンジェント
                 <span>{sin} / {cos} = {sin / cos}</span>
