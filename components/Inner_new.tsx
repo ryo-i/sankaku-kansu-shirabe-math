@@ -47,8 +47,8 @@ const Result = styled.div`
     padding: 10px 0;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    /* overflow-x: scroll;
-    white-space: nowrap; */
+    overflow-x: scroll;
+    white-space: nowrap;
   }
   .react-tabs__tab-list {
     margin: 0;
