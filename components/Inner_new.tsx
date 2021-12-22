@@ -47,6 +47,8 @@ const Result = styled.div`
     padding: 10px 0;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    /* overflow-x: scroll;
+    white-space: nowrap; */
   }
   .react-tabs__tab-list {
     margin: 0;
@@ -146,7 +148,7 @@ function Inner() {
     <>
         <UnitCircle>
           <dl>
-            <dt>単位円(半径r=1)</dt>
+            <dt>単位円(半径r = 1)</dt>
           </dl>
           <dd>
             <ReactP5Wrapper
@@ -180,17 +182,23 @@ function Inner() {
             <TabPanel>
               <dt>ラジアン(rad)</dt>
               <dd>
-                三角関数の角度は度数法ではなく弧度法（ラジアン）を用いる<br />
-                円周率(π)
+                三角関数の角度は度数法ではなく弧度法（ラジアン）を用いる
+              </dd>
+              <dt>円周率(π)</dt>
+              <dd>
                 <span>Math.PI = {pi}</span>
-                度数→ラジアン
+              </dd>
+              <dt>度数→ラジアン</dt>
+              <dd>
                 <span>
                   <ul>
                     <li>θ * (Math.PI / 180) = {rad}</li>
                     <li>{angle} * (Math.PI / 180) = {rad}</li>
                   </ul>
                 </span>
-                ラジアン→度数<br/>
+              </dd>
+              <dt>ラジアン→度数</dt>
+              <dd>
                 <span>
                   <ul>
                     <li>rad / (Math.PI / 180) = {rad / (pi / 180)}</li>
@@ -221,7 +229,7 @@ function Inner() {
               </dd>
               <dt>サイン(sin())</dt>
               <dd>
-                Y座標（単位円での高さ）
+                Y座標（直角三角形の高さ）
                 <span>
                   <ul>
                     <li>Math.sin(rad) = {sin}</li>
@@ -231,7 +239,7 @@ function Inner() {
               </dd>
               <dt>コサイン(cos())</dt>
               <dd>
-                X座標（単位円での底辺）
+                X座標（直角三角形の底辺）
                 <span>
                   <ul>
                     <li>Math.cos(rad) = {cos}</li>
@@ -253,7 +261,8 @@ function Inner() {
             <TabPanel>
               <dt>三角比の算出</dt>
               <dd>
-                三角比 = 直角三角形の2辺の長さの比率
+                三角比 = 直角三角形の2辺の長さの比率<br />
+                ※斜辺は単位円の半径rなので1
               </dd>
               <dt>サインの算出</dt>
               <dd>
@@ -262,12 +271,12 @@ function Inner() {
               </dd>
               <dt>コサインの算出</dt>
               <dd>
-                →底辺(cos) / 斜辺(1) = コサイン
+                底辺(cos) / 斜辺(1) = コサイン
                 <span>{cos} / 1 = {cos / 1}</span>
               </dd>
               <dt>タンジェントの算出</dt>
               <dd>
-                →高さ(sin) / 底辺(cos) = タンジェント
+                高さ(sin) / 底辺(cos) = タンジェント
                 <span>{sin} / {cos} = {sin / cos}</span>
                 →三角比の相互関係の公式①でもある<br />
                 tan θ = sin θ / cos θ
@@ -450,7 +459,7 @@ function Inner() {
             <TabPanel>
               <dt>逆三角関数のJS関数</dt>
               <dd>三角比からラジアンを算出するJS関数<br />
-              (逆三角形は90度まではすべて同じ結果になるが、それ以外の角度はatan2()の0〜180度、-180度〜0度が一致する)</dd>
+              ※0度〜90度まではすべて同じ結果で、他はatan2()の0〜180度と-180度〜0度がラジアンと一致する</dd>
               <dt>アークタンジェント2(atan2())</dt>
               <dd>
                 Y座標, X座標からラジアンを算出できる<br />
