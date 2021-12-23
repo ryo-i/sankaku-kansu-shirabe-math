@@ -184,7 +184,7 @@ function Inner() {
               <dd>
                 三角関数の角度は度数法ではなく弧度法（ラジアン）を用いる
               </dd>
-              <dt>円周率(π)</dt>
+              <dt>円周率(Math.PI)</dt>
               <dd>
                 円周率(π)の値を返すJS関数
                 <span>Math.PI = {pi}</span>
@@ -237,7 +237,7 @@ function Inner() {
               <dd>
                 ラジアンから三角比を算出するJSの関数
               </dd>
-              <dt>サイン(sin())</dt>
+              <dt>サイン(Math.sin())</dt>
               <dd>
                 Y座標（直角三角形の高さ）
                 <span>
@@ -247,7 +247,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>コサイン(cos())</dt>
+              <dt>コサイン(Math.cos())</dt>
               <dd>
                 X座標（直角三角形の底辺）
                 <span>
@@ -257,7 +257,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>タンジェント(tan())</dt>
+              <dt>タンジェント(Math.tan())</dt>
               <dd>
                 X座標とY座標の傾き
                 <span>
@@ -471,9 +471,9 @@ function Inner() {
               <dt>逆三角関数のJS関数</dt>
               <dd>三角比からラジアンを算出するJS関数<br />
               ※0度〜90度まではすべて同じ結果で、他はatan2()の0〜180度と-180度〜0度がラジアンと一致する</dd>
-              <dt>アークタンジェント2(atan2())</dt>
+              <dt>アークタンジェント2(Math.atan2())</dt>
               <dd>
-                Y座標, X座標からラジアンを算出できる<br />
+                Y座標, X座標からラジアンを算出<br />
                 単位円ではY座標 = sin, x座標 = cos
                 <span>
                   <ul>
@@ -482,9 +482,9 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>アークサイン(asin())</dt>
+              <dt>アークサイン(Math.asin())</dt>
               <dd>
-                サインからラジアンを算出する逆関数
+                サインからラジアンを算出
                 <span>
                   <ul>
                     <li>Math.asin(sin) = {Math.asin(sin)}</li>
@@ -492,9 +492,9 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>アークコサイン(acos())</dt>
+              <dt>アークコサイン(Math.acos())</dt>
               <dd>
-                コサインからラジアンを算出する逆関数
+                コサインからラジアンを算出
                 <span>
                   <ul>
                     <li>Math.acos(cos) = {Math.acos(cos)}</li>
@@ -502,9 +502,9 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>アークタンジェント(atan())</dt>
+              <dt>アークタンジェント(Math.atan())</dt>
               <dd>
-                タンジェントからラジアンを算出する逆関数
+                タンジェントからラジアンを算出
                 <span>
                   <ul>
                     <li>Math.atan(tan) = {Math.atan(tan)}</li>
@@ -516,7 +516,7 @@ function Inner() {
             <TabPanel>
               <dt>双曲線関数のJS関数</dt>
               <dd>三角比から双曲線関数を算出するJS関数</dd>
-              <dt>ハイパーボリックサイン(sinh())</dt>
+              <dt>ハイパーボリックサイン(Math.sinh())</dt>
               <dd>
                 <span>
                   <ul>
@@ -525,7 +525,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>ハイパーボリックコサイン(cosh())</dt>
+              <dt>ハイパーボリックコサイン(Math.cosh())</dt>
               <dd>
                 <span>
                   <ul>
@@ -534,7 +534,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>ハイパーボリックタンジェント(tanh())</dt>
+              <dt>ハイパーボリックタンジェント(Math.tanh())</dt>
               <dd>
                 <span>
                   <ul>
@@ -543,7 +543,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>ハイパーボリックアークサイン(asinh())</dt>
+              <dt>ハイパーボリックアークサイン(Math.asinh())</dt>
               <dd>
                 <span>
                   <ul>
@@ -552,7 +552,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>ハイパーボリックアークコサイン(acosh())</dt>
+              <dt>ハイパーボリックアークコサイン(Math.acosh())</dt>
               <dd>
                 <span>
                   <ul>
@@ -561,7 +561,7 @@ function Inner() {
                   </ul>
                 </span>
               </dd>
-              <dt>ハイパーボリックアークタンジェント(atanh())</dt>
+              <dt>ハイパーボリックアークタンジェント(Math.atanh())</dt>
               <dd>
                 <span>
                   <ul>

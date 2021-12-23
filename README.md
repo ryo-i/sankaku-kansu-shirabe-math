@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- ラジアンなどにテキストを追記、修正 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- JS関数名の前に「Math.」を追記 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 ## 詳細（ブログ）
