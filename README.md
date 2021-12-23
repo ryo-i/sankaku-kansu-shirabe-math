@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- メニューの横スクロール化(test) [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- ラジアンなどにテキストを追記、修正 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 ## 詳細（ブログ）

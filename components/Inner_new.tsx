@@ -186,10 +186,13 @@ function Inner() {
               </dd>
               <dt>円周率(π)</dt>
               <dd>
+                円周率(π)の値を返すJS関数
                 <span>Math.PI = {pi}</span>
               </dd>
               <dt>度数→ラジアン</dt>
               <dd>
+                度数からラジアンを算出する計算式<br />
+                θ * (π / 180) = rad
                 <span>
                   <ul>
                     <li>θ * (Math.PI / 180) = {rad}</li>
@@ -199,6 +202,8 @@ function Inner() {
               </dd>
               <dt>ラジアン→度数</dt>
               <dd>
+                逆算でラジアンから度数を算出<br />
+                rad / (π / 180) = θ
                 <span>
                   <ul>
                     <li>rad / (Math.PI / 180) = {rad / (pi / 180)}</li>
@@ -211,13 +216,18 @@ function Inner() {
                     <li>半径rと同じ長さの弧 = 1rad<br />
                     （通常は単位radは省略する）</li>
                     <li>円周の長さ = 2πrなので<br />
-                      360度のラジアン = 2π</li>
+                      360度のrad = 2π</li>
                     <li>2で割ると<br />
-                      半円180度のラジアン = π</li>
+                      180度のrad = π </li>
                     <li>さらに180で割ると<br />
-                      1度あたりのラジアン = π / 180</li>
-                    <li>ここに角度θをかける<br />
-                    角度θあたりのラジアン = θ * (Math.PI / 180)</li>
+                      1度あたりのrad = π / 180</li>
+                    <li>角度(θ)をかけて度数からラジアンを算出<br />
+                      θ * (π / 180) = rad</li>
+                    <li>逆算でラジアンから度数を算出<br />
+                      θ * (π / 180) = rad<br />
+                      rad = θ * (π / 180)<br />
+                      rad / (π / 180) = θ
+                    </li>
                   </ul>
                 </details>
               </dd>
@@ -262,7 +272,7 @@ function Inner() {
               <dt>三角比の算出</dt>
               <dd>
                 三角比 = 直角三角形の2辺の長さの比率<br />
-                ※斜辺は単位円の半径rなので1
+                ※斜辺の長さは単位円の半径rなので1
               </dd>
               <dt>サインの算出</dt>
               <dd>
@@ -278,7 +288,7 @@ function Inner() {
               <dd>
                 高さ(sin) / 底辺(cos) = タンジェント
                 <span>{sin} / {cos} = {sin / cos}</span>
-                →三角比の相互関係の公式①でもある<br />
+                ※<b>三角比の相互関係の公式①</b>でもある<br />
                 tan θ = sin θ / cos θ
               </dd>
             </TabPanel>
@@ -293,7 +303,7 @@ function Inner() {
                     <li>{(Math.pow(cos, 2))} + {(Math.pow(sin, 2))} = {(Math.pow(cos, 2)) + (Math.pow(sin, 2))}</li>
                   </ul>
                 </span>
-                →三角比の相互関係の公式②でもある<br />
+                ※<b>三角比の相互関係の公式②</b>でもある<br />
                 sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1<br />
                 <details>
                   <summary>証明（正方形を用いた証明）</summary>
@@ -335,6 +345,7 @@ function Inner() {
                   </ul>
                 </span>
                 公式①、②の組み合わせで求まる公式<br />
+                ※公式①は<b>タンジェントの算出式</b>、公式②は<b>三平方の定理</b>
                 <details>
                 <summary>証明</summary>
                   <ul>
