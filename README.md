@@ -2,13 +2,13 @@
 
 三角関数しらべMath
 
-## 作っているもの
+## 作ったもの
 
 ※参考：[https://sankaku-kansu-shirabe-math.vercel.app/]
 
 ## 進捗（コミット）
 
-- ラジアン部分のテキストを修正 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
+- Aboutページに用途を追加 [#5](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/5)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 
 ## 詳細（ブログ）

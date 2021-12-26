@@ -8,7 +8,7 @@ import Data from '../data/data.json';
 
 const headerTitle = Data.header.title;
 const pageTitle = 'このアプリについて';
-const pageText = 'アプリの概要をここに書く。';
+const pageText = 'サイン、コサイン、タンジェントって何？ グラフィック、モーション、3D作品の創作時に多用される三角関数の理解を深めるために作りました。';
 const headTitle = pageTitle + ' | ' + headerTitle;
 
 
@@ -53,8 +53,15 @@ function About() {
             <section>
                 <h2>使い方</h2>
                 <section>
-                    <h3>タイトル</h3>
-                    <p>説明説明説明説明説明説明説明説明</p>
+                    <h3>用途</h3>
+                    <p>下記のような用途に活用できます。</p>
+                    <ul>
+                        <li>角度ごとの三角関数の計算結果を単位円グラフで視覚的に確認できる</li>
+                        <li>JS Mathオブジェクトの三角関数系 組み込みメソッドの結果を確認できる</li>
+                        <li>単位円グラフに用いるp5.jsのメソッドとJS組み込みメソッドの結果を比較できる</li>
+                        <li>三角関数の公式とJS組み込み関数の結果を比較できる</li>
+                        <li>三角関数の公式の主要な証明式を参照できる</li>
+                    </ul>
                 </section>
                 <section>
                     <h3>タイトル</h3>
