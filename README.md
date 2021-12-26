@@ -8,6 +8,7 @@
 
 ## 進捗（コミット）
 
+- 単位円グラフのテキストを修正(書式統一) [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - Aboutページに用途を追加 [#5](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/5)
 - 参考資料を追記中 [#1](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/1)
 

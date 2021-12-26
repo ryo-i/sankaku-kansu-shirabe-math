@@ -153,8 +153,8 @@ const unitCircle = (p5: P5Instance) => {
         p5.fill('#000');
         p5.text('X', canvasSize - 20, canvasHalfSize - 5);
         p5.text('Y', canvasHalfSize + 5, 20);
-        p5.text('angle: ' + angle, 5, 20);
-        p5.text('radian: ' + radian.toFixed(4), 5, 40);
+        p5.text('θ: ' + angle, 5, 20);
+        p5.text('rad: ' + radian.toFixed(4), 5, 40);
         p5.text('sin: ' + sin.toFixed(4), 5, 60);
         p5.text('cos: ' + cos.toFixed(4), 5, 80);
         p5.text('tan: ' + tan.toFixed(4), 5, 100);

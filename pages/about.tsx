@@ -8,7 +8,7 @@ import Data from '../data/data.json';
 
 const headerTitle = Data.header.title;
 const pageTitle = 'このアプリについて';
-const pageText = 'サイン、コサイン、タンジェントって何？ グラフィック、モーション、3D作品の創作時に多用される三角関数の理解を深めるために作りました。';
+const pageText = 'サイン、コサイン、タンジェントって何？ グラフィック、モーション、3D作品の制作に多用される三角関数の理解を深めるために作りました。';
 const headTitle = pageTitle + ' | ' + headerTitle;
 
 
@@ -64,8 +64,16 @@ function About() {
                     </ul>
                 </section>
                 <section>
-                    <h3>タイトル</h3>
-                    <p>説明説明説明説明説明説明説明説明</p>
+                    <h3>単位円グラフ</h3>
+                    <p>ページ上部に表示されているのは単位円グラフ（半径R = 1の円）です。</p>
+                    <figure><img src="img/sankaku_01.jpg" alt="単位円グラフ(30度)" /></figure>
+                    <p>左上のテキストは三角関数の主要な値です。小数は4桁までで四捨五入しています</p>
+                    <ul>
+                        <li>angleは角度で初期値は30度です</li>
+                        <li>angleは角度で初期値は30度です</li>
+                        <li>angleは角度で初期値は30度です</li>
+                        <li>angleは角度で初期値は30度です</li>
+                    </ul>
                 </section>
                 <section>
                     <h3>タイトル</h3>
