@@ -65,7 +65,7 @@ function About() {
                 </section>
                 <section>
                     <h3>単位円グラフ</h3>
-                    <p>ページ上部に表示されているのは単位円グラフです。左上に三角関数の主要な値を表示しています（小数は4桁までで四捨五入）。
+                    <p>ページ上部に表示されているのは単位円のグラフです。左上に三角関数の主要な値を表示しています（小数は4桁までで四捨五入）。
                    </p>
                     <figure><img src="img/sankaku_01.jpg" alt="単位円グラフ" /></figure>
                     <p></p>
@@ -77,6 +77,15 @@ function About() {
                         <li>cosはコサインで、X座標（直角三角形の底辺）です</li>
                         <li>tanはタンジェントで、Y座標とX座標の傾きです</li>
                     </ul>
+                </section>
+                <section>
+                    <h3>角度(θ)の変更</h3>
+                    <p>角度(θ)のスライダーは単位円グラフの角度と同期します。テキストで直接入力もできます。</p>
+                    <figure><img src="img/sankaku_02.jpg" alt="角度の初期値(30度)" /></figure>
+                    <p>角度スライダーを動かすと単位円グラフの角度も移動します。</p>
+                    <figure><img src="img/sankaku_03.jpg" alt="角度をプラス側に移動" /></figure>
+                    <p>角度スライダーはマイナス側にも動かせます。角度の範囲は-360度〜360度です。</p>
+                    <figure><img src="img/sankaku_04.jpg" alt="角度をマイナス側に移動" /></figure>
                 </section>
                 <section>
                     <h3>タイトル</h3>
