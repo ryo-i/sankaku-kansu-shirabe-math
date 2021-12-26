@@ -85,21 +85,21 @@ function Inner() {
 
 
   // 角度→ラジアン
-  const angle2radian = (angle) => {
+  const angle2radian = (angle: number): void => {
     let getRadian: number = angle * (pi / 180);
     // getRadian = Number(getRadian.toFixed(4));
     setRad(getRadian);
   };
 
   // 三角比
-  const trigonometricRatio = (radian) => {
+  const trigonometricRatio = (radian: number): void => {
     setSin(Math.sin(radian));
     setCos(Math.cos(radian));
     setTan(Math.tan(radian));
   }
 
   // 角度変更
-  const changeAngle = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const changeAngle = (e: React.ChangeEvent<HTMLInputElement>): void => {
     let getValue: number = Number(e.target.value);
 
     if (getValue > 360) {
@@ -113,8 +113,8 @@ function Inner() {
 
 
   // cosのプラマイチェック
-  const checkCos = ():number => {
-    let cos:number;
+  const checkCos = (): number => {
+    let cos: number;
     if ((90 < angle && angle < 270) || (-270 < angle && angle < -90)) {
       cos = -(Math.sqrt(1 - Math.pow(sin, 2)));
     } else {
@@ -125,8 +125,8 @@ function Inner() {
 
 
   // sinのプラマイチェック
-  const checkSin = ():number => {
-    let sin:number;
+  const checkSin = (): number => {
+    let sin: number;
     if ((180 < angle && angle < 360) || (-180 < angle && angle < 0)) {
       sin = -(Math.sqrt(1 - Math.pow(cos, 2)));
     } else {

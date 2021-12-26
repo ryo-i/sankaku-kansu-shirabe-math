@@ -8,6 +8,7 @@
 
 ## 進捗（コミット）
 
+- TypeScriptの型を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 - Aboutページに「単位円グラフ」を追加 [#5](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/5)
 
 ## 詳細（ブログ）

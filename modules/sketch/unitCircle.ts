@@ -4,8 +4,8 @@ import { P5Instance } from 'react-p5-wrapper'
 const unitCircle = (p5: P5Instance) => {
     let angle: number = 0;
 
-    p5.setup = () => {
-        const windowWidth = p5.windowWidth;
+    p5.setup = (): void => {
+        const windowWidth: number = p5.windowWidth;
         // console.log('windowWidth', windowWidth);
 
         if (windowWidth < 500) {
@@ -15,26 +15,27 @@ const unitCircle = (p5: P5Instance) => {
         }
     };
 
-    p5.updateWithProps = (props) => {
+    p5.updateWithProps = (props): void => {
         if (props.angle || props.angle === 0) {
             angle = props.angle;
             // console.log('angle', angle);
         }
     };
 
-    p5.mouseClicked = function() {
+    /* // p5.jsからReactに値を送る
+     p5.mouseClicked = ():void => {
         // countClicks++;
-    }
+    } */
 
-    p5.draw = () => {
+    p5.draw = (): void => {
         // サイズ設定
-        const canvasSize = p5.width;
-        const canvasHalfSize = canvasSize * 0.5;
-        const radiusRatio = 0.8;
-        const radiusSize = canvasHalfSize * radiusRatio;
-        const pointRatio = 0.03;
-        const pointSize = canvasSize * pointRatio;
-        const memorySize = 5;
+        const canvasSize: number = p5.width;
+        const canvasHalfSize: number = canvasSize * 0.5;
+        const radiusRatio: number = 0.8;
+        const radiusSize: number = canvasHalfSize * radiusRatio;
+        const pointRatio: number = 0.03;
+        const pointSize: number = canvasSize * pointRatio;
+        const memorySize: number = 5;
 
         // 三角関数
         const radian: number = angle * (p5.PI / 180);
@@ -161,7 +162,7 @@ const unitCircle = (p5: P5Instance) => {
     };
 
     p5.windowResized = () => {
-        const windowWidth = p5.windowWidth;
+        const windowWidth: number = p5.windowWidth;
         // console.log('windowWidth', windowWidth);
 
         if (windowWidth < 600) {

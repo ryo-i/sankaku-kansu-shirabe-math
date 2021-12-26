@@ -2,15 +2,15 @@ import { P5Instance } from 'react-p5-wrapper'
 
 
 export let p2rText: string = 'p5.jsからReactへ';
-export let countClicks = 0;
+export let countClicks: number = 0;
 
 
-const unitCircle = (p5: P5Instance) => {
+const unitCircle = (p5: P5Instance): void => {
     let countTimes: number = 0;
     let r2pText: string = '';
 
-    p5.setup = () => {
-        const windowWidth = p5.windowWidth;
+    p5.setup = (): void => {
+        const windowWidth: number = p5.windowWidth;
         // console.log('windowWidth', windowWidth);
 
         if (windowWidth < 600) {
@@ -20,7 +20,7 @@ const unitCircle = (p5: P5Instance) => {
         }
     };
 
-    p5.updateWithProps = (props) => {
+    p5.updateWithProps = (props): void => {
         if (props.r2pText) {
             r2pText = props.r2pText;
         }
@@ -30,7 +30,7 @@ const unitCircle = (p5: P5Instance) => {
         }
     };
 
-    p5.mouseClicked = function() {
+    p5.mouseClicked = (): void => {
         countClicks++;
     }
 
@@ -43,7 +43,7 @@ const unitCircle = (p5: P5Instance) => {
     };
 
     p5.windowResized = () => {
-        const windowWidth = p5.windowWidth;
+        const windowWidth: number = p5.windowWidth;
         // console.log('windowWidth', windowWidth);
 
         if (windowWidth < 600) {
