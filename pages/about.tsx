@@ -68,7 +68,6 @@ function About() {
                     <p>ページ上部に表示されているのは単位円のグラフです。左上に三角関数の主要な値を表示しています（小数は4桁で四捨五入）。
                    </p>
                     <figure><img src="img/sankaku_01.jpg" alt="単位円グラフ" /></figure>
-                    <p></p>
                     <ul>
                         <li>単位円の半径r（直角三角形の斜辺）の長さは1です。</li>
                         <li>θは度数法による角度で初期値は30度です</li>
@@ -89,12 +88,22 @@ function About() {
                 </section>
                 <section>
                     <h3>ラジアン</h3>
-                    <p>三角関数の角度で使われるラジアン（弧度法）の算出方法。円周率(π)を使って割り出します。ラジアンから度数の算出方法も。</p>
+                    <p>三角関数の角度で使われるラジアン（弧度法）の算出。円周率(π)のJS関数(Math.PI)を使います。ラジアンから度数の算出も。</p>
                     <figure><img src="img/sankaku_05.jpg" alt="ラジアン" /></figure>
                     <p>角度のスライダーを変更するとラジアンの数値も同期して変化します（以下同じ）</p>
                     <figure><img src="img/sankaku_06.jpg" alt="ラジアン(角度の変更)" /></figure>
                     <p>「証明」を開くとラジアンと円周率(π)の関係がわかります</p>
                     <figure><img src="img/sankaku_07.jpg" alt="ラジアン(証明)" /></figure>
+                </section>
+                <section>
+                    <h3>三角比のJS関数</h3>
+                    <p>引数にラジアンを入れると三角比を返すJS関数。</p>
+                    <figure><img src="img/sankaku_08.jpg" alt="三角比のJS関数" /></figure>
+                    <ul>
+                        <li>サイン(Math.sin())：Y座標（直角三角形の高さ）</li>
+                        <li>コサイン(Math.cos())：X座標（直角三角形の底辺）</li>
+                        <li>タンジェント(Math.tan())：X座標とY座標の傾き</li>
+                    </ul>
                 </section>
                 <section>
                     <h3>タイトル</h3>
