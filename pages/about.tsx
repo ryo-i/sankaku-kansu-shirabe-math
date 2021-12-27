@@ -92,7 +92,7 @@ function About() {
                     <figure><img src="img/sankaku_05.jpg" alt="ラジアン" /></figure>
                     <p>角度のスライダーを変更するとラジアンの数値も同期して変化します（以下同じ）</p>
                     <figure><img src="img/sankaku_06.jpg" alt="ラジアン(角度の変更)" /></figure>
-                    <p>「証明」を開くとラジアンと円周率(π)の関係がわかります</p>
+                    <p>「▶︎証明」を開くとラジアンと円周率(π)の関係がわかります</p>
                     <figure><img src="img/sankaku_07.jpg" alt="ラジアン(証明)" /></figure>
                 </section>
                 <section>
@@ -104,6 +104,23 @@ function About() {
                         <li>コサイン(Math.cos())：X座標（直角三角形の底辺）</li>
                         <li>タンジェント(Math.tan())：X座標とY座標の傾き</li>
                     </ul>
+                </section>
+                <section>
+                    <h3>三角比の算出</h3>
+                    <p>直角三角形の2辺の長さから三角比を算出。JS関数の三角比の結果とほぼ同じことがわかります。</p>
+                    <figure><img src="img/sankaku_09.jpg" alt="三角比の算出" /></figure>
+                    <ul>
+                        <li>高さ(sin) / 斜辺(1) = サイン</li>
+                        <li>底辺(cos) / 斜辺(1) = コサイン</li>
+                        <li>高さ(sin) / 底辺(cos) = タンジェント</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>三平方の定理</h3>
+                    <p>直角三角形の3辺の長さの関係を算出。底辺の二乗と高さの二乗を足すと斜辺の二乗（=単位円の斜辺の長さ1）になります。</p>
+                    <figure><img src="img/sankaku_10.jpg" alt="三平方の定理" /></figure>
+                    <p>「▶︎証明」を開くと三平方の定理がなぜ成立するのかわかります。</p>
+                    <figure><img src="img/sankaku_11.jpg" alt="三角比の算出(証明)" /></figure>
                 </section>
                 <section>
                     <h3>タイトル</h3>

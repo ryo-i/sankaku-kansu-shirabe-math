@@ -43,6 +43,9 @@ const Result = styled.div`
       }
     }
   }
+  img {
+    max-width: 100%;
+  }
   menu {
     padding: 10px 0;
     border-top: 1px solid #ccc;
@@ -307,6 +310,7 @@ function Inner() {
                 sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1<br />
                 <details>
                   <summary>証明（正方形を用いた証明）</summary>
+                  <figure><img src="img/sanheiho.jpg" alt="三平方の定理の証明" /></figure>
                   <ul>
                     <li>
                       一辺 = 底辺 + 高さの大正方形の中に<br />
