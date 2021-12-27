@@ -28,7 +28,7 @@ const Main = styled.main`
     figure {
         margin: 0 0 30px;
         img {
-            width: 100%;
+            max-width: 100%;
             box-shadow: 0 0 15px 2px rgb(0 0 0 / 10%);
         }
     }
@@ -57,15 +57,15 @@ function About() {
                     <p>下記のような用途に活用できます。</p>
                     <ul>
                         <li>角度ごとの三角関数の計算結果を単位円グラフで視覚的に確認できる</li>
-                        <li>JS Mathオブジェクトの三角関数系 組み込みメソッドの結果を確認できる</li>
-                        <li>単位円グラフに用いるp5.jsのメソッドとJS組み込みメソッドの結果を比較できる</li>
-                        <li>三角関数の公式とJS組み込み関数の結果を比較できる</li>
+                        <li>JS(Mathオブジェクト)の三角関数系の組み込み関数による計算結果を確認できる</li>
+                        <li>単位円グラフに用いるp5.jsのメソッドとJS組み込み関数の計算結果を比較できる</li>
+                        <li>三角関数の公式とJS組み込み関数の計算結果を比較できる</li>
                         <li>三角関数の公式の主要な証明式を参照できる</li>
                     </ul>
                 </section>
                 <section>
                     <h3>単位円グラフ</h3>
-                    <p>ページ上部に表示されているのは単位円のグラフです。左上に三角関数の主要な値を表示しています（小数は4桁までで四捨五入）。
+                    <p>ページ上部に表示されているのは単位円のグラフです。左上に三角関数の主要な値を表示しています（小数は4桁で四捨五入）。
                    </p>
                     <figure><img src="img/sankaku_01.jpg" alt="単位円グラフ" /></figure>
                     <p></p>
@@ -86,6 +86,15 @@ function About() {
                     <figure><img src="img/sankaku_03.jpg" alt="角度をプラス側に移動" /></figure>
                     <p>角度スライダーはマイナス側にも動かせます。角度の範囲は-360度〜360度です。</p>
                     <figure><img src="img/sankaku_04.jpg" alt="角度をマイナス側に移動" /></figure>
+                </section>
+                <section>
+                    <h3>ラジアン</h3>
+                    <p>三角関数の角度で使われるラジアン（弧度法）の算出方法。円周率(π)を使って割り出します。ラジアンから度数の算出方法も。</p>
+                    <figure><img src="img/sankaku_05.jpg" alt="ラジアン" /></figure>
+                    <p>角度のスライダーを変更するとラジアンの数値も同期して変化します（以下同じ）</p>
+                    <figure><img src="img/sankaku_06.jpg" alt="ラジアン(角度の変更)" /></figure>
+                    <p>「証明」を開くとラジアンと円周率(π)の関係がわかります</p>
+                    <figure><img src="img/sankaku_07.jpg" alt="ラジアン(証明)" /></figure>
                 </section>
                 <section>
                     <h3>タイトル</h3>
