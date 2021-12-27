@@ -123,6 +123,14 @@ function About() {
                     <figure><img src="img/sankaku_11.jpg" alt="三角比の算出(証明)" /></figure>
                 </section>
                 <section>
+                    <h3>三角比の相互関係</h3>
+                    <p>三角比の相互関係の公式①(=タンジェントの公式)、三角比の相互関係の公式②(=三平方の定理)から求まる三角比の相互関係の公式③。右辺と左辺は常に等しくなります。</p>
+                    <figure><img src="img/sankaku_12.jpg" alt="三角比の相互関係" /></figure>
+                    <p>「▶︎証明」を開くと三角比の相互関係の公式①、②、③の関係がわかります。</p>
+                    <figure><img src="img/sankaku_13.jpg" alt="三角比の相互関係(証明)" /></figure>
+                    <p>三角比の相互関係の公式を使うと三角比のどれか一つの値がわかれば他の2つの値も算出することができます。</p>
+                </section>
+                <section>
                     <h3>タイトル</h3>
                     <p>説明説明説明説明説明説明説明説明</p>
                 </section>
