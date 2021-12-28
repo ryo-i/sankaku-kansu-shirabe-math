@@ -149,8 +149,30 @@ function About() {
                     <figure><img src="img/sankaku_16.jpg" alt="tan -> sin, cos" /></figure>
                 </section>
                 <section>
-                    <h3>タイトル</h3>
-                    <p>説明説明説明説明説明説明説明説明</p>
+                    <h3>逆三角関数のJS関数</h3>
+                    <p>三角関数から角度(ラジアン)を算出するJS関数。0〜90度まではどの関数も一致。それ以外はatan2()のみ360度一致（座標から直接算出できる意味でもこれが一番良さそうです）</p>
+                    <figure><img src="img/sankaku_17.jpg" alt="逆三角関数のJS関数" /></figure>
+                    <ul>
+                        <li>アークタンジェント2(Math.atan2())：Y座標, X座標からラジアンを算出</li>
+                        <li>アークサイン(Math.asin())：サインからラジアンを算出</li>
+                        <li>アークコサイン(Math.acos())：コサインからラジアンを算出</li>
+                        <li>アークタンジェント(Math.atan())：タンジェントからラジアンを算出</li>
+                    </ul>
+                    <p>逆三角関数の手計算は微分を用いた計算量が多い証明式のため、このJS関数を使うのが便利と思います。</p>
+                </section>
+                <section>
+                    <h3>双曲線関数のJS関数</h3>
+                    <p>JS関数で用意された残りのジャンルである双曲線関数。</p>
+                    <figure><img src="img/sankaku_18.jpg" alt="双曲線関数のJS関数" /></figure>
+                    <ul>
+                        <li>ハイパーボリックサイン(Math.sinh())</li>
+                        <li>ハイパーボリックコサイン(Math.cosh())</li>
+                        <li>ハイパーボリックタンジェント(Math.tanh())</li>
+                        <li>ハイパーボリックアークサイン(Math.asinh())</li>
+                        <li>ハイパーボリックアークコサイン(Math.acosh())</li>
+                        <li>ハイパーボリックアークタンジェント(Math.atanh())</li>
+                    </ul>
+                    <p>これまでのどの計算結果とも一致せず、用途をよく理解できてないです（角度によって結果がどう変化するかを知るために追加）。</p>
                 </section>
             </section>
             <section>
