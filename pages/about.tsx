@@ -52,8 +52,23 @@ function About() {
             <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
             <section>
                 <h2>使い方</h2>
+                <ul>
+                    <li><a href="#yoto">用途</a></li>
+                    <li><a href="#tanien">単位円グラフ</a></li>
+                    <li><a href="#kakudo">角度(θ)の変更</a></li>
+                    <li><a href="#radian">ラジアン</a></li>
+                    <li><a href="#sankaku-js">三角比のJS関数</a></li>
+                    <li><a href="#sankaku-keisan">三角比の算出</a></li>
+                    <li><a href="#sanheiho">三平方の定理</a></li>
+                    <li><a href="#sogokankei">三角比の相互関係</a></li>
+                    <li><a href="#sogo-sin">サインからコサイン、タンジェントを算出</a></li>
+                    <li><a href="#sogo-cos">コサインからサイン、タンジェントを算出</a></li>
+                    <li><a href="#sogo-tan">タンジェントからサイン、コサインを算出</a></li>
+                    <li><a href="#gyakusankaku">逆三角関数のJS関数</a></li>
+                    <li><a href="#sokyokusen">双曲線関数のJS関数</a></li>
+                </ul>
                 <section>
-                    <h3>用途</h3>
+                    <h3 id="yoto">用途</h3>
                     <p>下記のような用途に活用できます。</p>
                     <ul>
                         <li>角度ごとの三角関数の計算結果を単位円グラフで視覚的に確認できる</li>
@@ -64,7 +79,7 @@ function About() {
                     </ul>
                 </section>
                 <section>
-                    <h3>単位円グラフ</h3>
+                    <h3 id="tanien">単位円グラフ</h3>
                     <p>ページ上部に表示されているのは単位円のグラフです。左上に三角関数の主要な値を表示しています（小数は4桁で四捨五入）。
                    </p>
                     <figure><img src="img/sankaku_01.jpg" alt="単位円グラフ" /></figure>
@@ -78,7 +93,7 @@ function About() {
                     </ul>
                 </section>
                 <section>
-                    <h3>角度(θ)の変更</h3>
+                    <h3 id="kakudo">角度(θ)の変更</h3>
                     <p>角度(θ)のスライダーは単位円グラフの角度と同期します。テキストで直接入力もできます。</p>
                     <figure><img src="img/sankaku_02.jpg" alt="角度の初期値(30度)" /></figure>
                     <p>角度スライダーを動かすと単位円グラフの角度も移動します。</p>
@@ -87,7 +102,7 @@ function About() {
                     <figure><img src="img/sankaku_04.jpg" alt="角度をマイナス側に移動" /></figure>
                 </section>
                 <section>
-                    <h3>ラジアン</h3>
+                    <h3 id="radian">ラジアン</h3>
                     <p>三角関数の角度で使われるラジアン（弧度法）の算出。円周率(π)のJS関数(Math.PI)を使います。ラジアンから度数の算出も。</p>
                     <figure><img src="img/sankaku_05.jpg" alt="ラジアン" /></figure>
                     <p>角度のスライダーを変更するとラジアンの数値も同期して変化します（以下同じ）</p>
@@ -96,7 +111,7 @@ function About() {
                     <figure><img src="img/sankaku_07.jpg" alt="ラジアン(証明)" /></figure>
                 </section>
                 <section>
-                    <h3>三角比のJS関数</h3>
+                    <h3 id="sankaku-js">三角比のJS関数</h3>
                     <p>引数にラジアンを入れると三角比を返すJS関数。</p>
                     <figure><img src="img/sankaku_08.jpg" alt="三角比のJS関数" /></figure>
                     <ul>
@@ -106,7 +121,7 @@ function About() {
                     </ul>
                 </section>
                 <section>
-                    <h3>三角比の算出</h3>
+                    <h3 id="sankaku-keisan">三角比の算出</h3>
                     <p>直角三角形の2辺の長さから三角比を算出。JS関数の三角比の結果とほぼ同じことがわかります。</p>
                     <figure><img src="img/sankaku_09.jpg" alt="三角比の算出" /></figure>
                     <ul>
@@ -116,14 +131,14 @@ function About() {
                     </ul>
                 </section>
                 <section>
-                    <h3>三平方の定理</h3>
+                    <h3 id="sanheiho">三平方の定理</h3>
                     <p>直角三角形の3辺の長さの関係を算出。底辺の二乗と高さの二乗を足すと斜辺の二乗（=単位円の斜辺の長さ1）になります。</p>
                     <figure><img src="img/sankaku_10.jpg" alt="三平方の定理" /></figure>
                     <p>「▶︎証明」を開くと三平方の定理がなぜ成立するのかわかります。</p>
                     <figure><img src="img/sankaku_11.jpg" alt="三角比の算出(証明)" /></figure>
                 </section>
                 <section>
-                    <h3>三角比の相互関係</h3>
+                    <h3 id="sogokankei">三角比の相互関係</h3>
                     <p>三角比の相互関係の公式①(=タンジェントの公式)、公式②(=三平方の定理)から求まる公式③。右辺と左辺は常に等しくなります。</p>
                     <figure><img src="img/sankaku_12.jpg" alt="三角比の相互関係" /></figure>
                     <p>「▶︎証明」を開くと三角比の相互関係の公式①、②、③の関係がわかります。</p>
@@ -131,28 +146,28 @@ function About() {
                     <p>三角比の相互関係の公式を使うと三角比のどれか一つの値がわかれば他の2つの値も算出することができます。</p>
                 </section>
                 <section>
-                    <h3>サインからコサイン、タンジェントを算出</h3>
+                    <h3 id="sogo-sin">サインからコサイン、タンジェントを算出</h3>
                     <p>三角比の相互関係の公式の実例。公式①、②を使ってサインからコサイン、タンジェントを算出します。</p>
                     <figure><img src="img/sankaku_14.jpg" alt="sin -> cos, tan" /></figure>
                     <p>ただし、角度が90度〜270度(-270度〜-90度)の場合はコサインをマイナスにする必要があります。</p>
                     <figure><img src="img/sankaku_14_2.jpg" alt="sin -> cos, tan" /></figure>
                 </section>
                 <section>
-                    <h3>コサインからサイン、タンジェントを算出</h3>
+                    <h3 id="sogo-cos">コサインからサイン、タンジェントを算出</h3>
                     <p>三角比の相互関係の公式の実例。公式①、②を使ってコサインからサイン、タンジェントを算出します。</p>
                     <figure><img src="img/sankaku_15.jpg" alt="cos -> sin, tan" /></figure>
                     <p>ただし、角度が180度〜360度(0度〜-180度)の場合はサインをマイナスにする必要があります。</p>
                     <figure><img src="img/sankaku_15_2.jpg" alt="sin -> cos, tan" /></figure>
                 </section>
                 <section>
-                    <h3>タンジェントからサイン、コサインを算出</h3>
+                    <h3 id="sogo-tan">タンジェントからサイン、コサインを算出</h3>
                     <p>三角比の相互関係の公式の実例。公式①、③を使ってタンジェントからサイン、コサインを算出します。</p>
                     <figure><img src="img/sankaku_16.jpg" alt="tan -> sin, cos" /></figure>
                     <p>ただし、角度が90度〜270度(-270度〜-90度)の場合はコサインをマイナスにする必要があります。</p>
                     <figure><img src="img/sankaku_16_2.jpg" alt="sin -> cos, tan" /></figure>
                 </section>
                 <section>
-                    <h3>逆三角関数のJS関数</h3>
+                    <h3 id="gyakusankaku">逆三角関数のJS関数</h3>
                     <p>三角関数から角度(ラジアン)を算出するJS関数。0〜90度まではどの関数も一致。それ以外はatan2()のみ360度一致（座標から直接算出できる意味でもこれが一番良さそうです）</p>
                     <figure><img src="img/sankaku_17.jpg" alt="逆三角関数のJS関数" /></figure>
                     <ul>
@@ -164,7 +179,7 @@ function About() {
                     <p>逆三角関数の手計算は微分を用いた計算量が多い証明式のため、このJS関数を使うのが便利と思います。</p>
                 </section>
                 <section>
-                    <h3>双曲線関数のJS関数</h3>
+                    <h3 id="sokyokusen">双曲線関数のJS関数</h3>
                     <p>JS関数で用意された残りのジャンルである双曲線関数。</p>
                     <figure><img src="img/sankaku_18.jpg" alt="双曲線関数のJS関数" /></figure>
                     <ul>
