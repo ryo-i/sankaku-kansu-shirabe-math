@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- Aboutページに目次を追加 [#5](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/5)
+- Aboutページ「逆三角関数」に図を追加 [#5](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/5)
 - TypeScriptの型を追加 [#4](https://github.com/ryo-i/sankaku-kansu-shirabe-math/issues/4)
 
 ## 詳細（ブログ）
