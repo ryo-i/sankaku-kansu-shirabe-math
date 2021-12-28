@@ -373,11 +373,11 @@ function Inner() {
               </dd>
             </TabPanel>
             <TabPanel>
-              <dt>サインからコサイン、タンジェントを求める</dt>
+              <dt>サインからコサイン、タンジェントを算出</dt>
               <dd>
                 サインだけわかっている場合
                 <span>sin = {sin}</span>
-                公式②からコサインを求める
+                公式②からコサインを算出
                 <ul>
                   <li>sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1</li>
                   <li>cos<sup>2</sup>θ = 1 - sin<sup>2</sup>θ</li>
@@ -393,7 +393,7 @@ function Inner() {
                     cos = {checkCos()} ({angle}度)</li>
                   </ul>
                 </span>
-                公式①からタンジェントを求める<br />
+                公式①からタンジェントを算出<br />
                 tan θ = sin θ / cos θ
                 <span>
                   <ul>
@@ -404,11 +404,11 @@ function Inner() {
               </dd>
             </TabPanel>
             <TabPanel>
-              <dt>コサインからサイン、タンジェントを求める</dt>
+              <dt>コサインからサイン、タンジェントを算出</dt>
               <dd>
                 コサインだけわかっている場合
                 <span>cos = {cos}</span>
-                公式②からサインを求める
+                公式②からサインを算出
                 <ul>
                   <li>sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1</li>
                   <li>sin<sup>2</sup>θ = 1 - cos<sup>2</sup>θ</li>
@@ -424,7 +424,7 @@ function Inner() {
                     sin = {checkSin()} ({angle}度)</li>
                   </ul>
                 </span>
-                公式①からタンジェントを求める<br />
+                公式①からタンジェントを算出<br />
                 tan θ = sin θ / cos θ
                 <span>
                   <ul>
@@ -435,11 +435,11 @@ function Inner() {
               </dd>
             </TabPanel>
             <TabPanel>
-              <dt>タンジェントからサイン、コサインを求める</dt>
+              <dt>タンジェントからサイン、コサインを算出</dt>
               <dd>
                 タンジェントだけわかっている場合
                 <span>tan = {tan}</span>
-                公式③からコサインを求める
+                公式③からコサインを算出
                 <ul>
                   <li>1 + tan<sup>2</sup>θ = 1 / cos<sup>2</sup>θ</li>
                   <li>1 / cos<sup>2</sup>θ = 1 + tan<sup>2</sup>θ</li>
@@ -457,7 +457,7 @@ function Inner() {
                     cos = {checkCos()} ({angle}度)</li>
                   </ul>
                 </span>
-                公式①からサインを求める<br />
+                公式①からサインを算出<br />
                 <ul>
                   <li>tan θ = sin θ / cos θ</li>
                   <li>sin θ / cos θ = tan θ</li>
