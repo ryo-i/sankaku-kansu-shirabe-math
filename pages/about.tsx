@@ -201,11 +201,11 @@ function About() {
                 <h2>詳細</h2>
                 <section>
                     <h3>ブログ</h3>
-                    <p><a href="https://www.i-ryo.com/entry/xxxx">タイトル - クモのようにコツコツと</a></p>
+                    <p><a href="https://www.i-ryo.com/entry/2021/12/31/160217">【React & p5.js】「三角関数しらべMath」を作った（三角関数の理解を深めるアプリ） - クモのようにコツコツと</a></p>
                 </section>
                 <section>
                     <h3>ソースコード（GitHub）</h3>
-                    <p><a href="https://github.com/ryo-i/xxxxx">リポジトリ</a></p>
+                    <p><a href="https://github.com/ryo-i/sankaku-kansu-shirabe-math">リポジトリ</a></p>
                 </section>
             </section>
             <Profile />
